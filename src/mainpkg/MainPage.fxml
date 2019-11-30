@@ -14,10 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MainPageController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-spacing: 2;">
+      <VBox prefHeight="480.0" prefWidth="781.0" style="-fx-spacing: 2;">
          <children>
             <MenuBar>
               <menus>
@@ -38,14 +37,14 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Label contentDisplay="TOP" prefHeight="32.0" prefWidth="601.0" style="-fx-background-color: black;" text="Passport Issue Management" textFill="#f8f6f6">
+            <Label contentDisplay="TOP" prefHeight="32.0" prefWidth="782.0" style="-fx-background-color: #3B5323;" text="Passport Issue Management" textAlignment="CENTER" textFill="#f8f6f6">
                <font>
-                  <Font size="22.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Label>
-            <HBox prefHeight="361.0" prefWidth="600.0">
+            <HBox prefHeight="421.0" prefWidth="781.0">
                <children>
-                  <VBox prefHeight="350.0" prefWidth="334.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: green;">
+                  <VBox prefHeight="420.0" prefWidth="397.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: #228B22; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="loginTextLabel" prefHeight="26.0" prefWidth="270.0" text="Login using existing account">
                            <font>
@@ -55,13 +54,22 @@
                               <Insets left="15.0" right="15.0" />
                            </padding>
                         </Label>
-                        <TextField fx:id="userNameTextField" onAction="#userNameTextField" promptText="username" />
-                        <PasswordField fx:id="passwordTextField" promptText="password" />
-                        <ChoiceBox fx:id="userTypeChoiceBoxLogin" prefHeight="26.0" prefWidth="300.0" />
-                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="26.0" prefWidth="69.0" text="Login" />
+                        <TextField fx:id="userNameTextField" onAction="#userNameTextField" promptText="username" style="-fx-background-color: #A6D785;">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <PasswordField fx:id="passwordTextField" promptText="password" style="-fx-background-color: #A6D785;">
+                           <font>
+                              <Font size="14.0" />
+                           </font></PasswordField>
+                        <ChoiceBox fx:id="userTypeChoiceBoxLogin" prefHeight="26.0" prefWidth="300.0" style="-fx-background-color: #A6D785;" />
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #3B5323;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
                      </children>
                   </VBox>
-                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="338.0" prefWidth="265.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: lightblue;">
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="420.0" prefWidth="384.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: #228B22; -fx-border-width: 2;">
                      <children>
                         <Label fx:id="signUpLabel" prefHeight="26.0" prefWidth="270.0" text="Sign Up As:">
                            <font>
@@ -71,8 +79,11 @@
                               <Insets left="15.0" right="15.0" />
                            </padding>
                         </Label>
-                        <ChoiceBox fx:id="userTypeChoiceBoxSignUp" prefHeight="26.0" prefWidth="300.0" />
-                        <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpButtonOnClick" prefHeight="26.0" prefWidth="69.0" text="Sign Up" />
+                        <ChoiceBox fx:id="userTypeChoiceBoxSignUp" prefHeight="26.0" prefWidth="300.0" style="-fx-background-color: #A6D785;" />
+                        <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpButtonOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #3B5323;" text="Sign Up" textFill="#f5f5f5">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
                      </children>
                   </VBox>
                </children>
