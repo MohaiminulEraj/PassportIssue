@@ -57,7 +57,14 @@ public class MainPageController implements Initializable {
     }
 
     @FXML
-    private void forgotAccountLabelOnClick(MouseEvent event) {
+    private void forgotAccountLabelOnClick(MouseEvent event) throws IOException {
+        Parent forgotAccountPopup = FXMLLoader.load(getClass().getResource("ForgotAccntpopup.fxml"));
+        Scene popupForgotAccountScene = new Scene(forgotAccountPopup);
+        
+        Stage window  = new Stage();
+        window.setTitle("Pop-up window Forgot Account");
+        window.setScene(popupForgotAccountScene);
+        window.show();
     }
 
     @FXML
