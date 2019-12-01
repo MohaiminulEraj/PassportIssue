@@ -5,16 +5,23 @@
  */
 package mainpkg;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -77,13 +84,19 @@ public class SignupCitizenSceneController implements Initializable {
     private TextField secondaryCountryTextField;
     @FXML
     private Button citizenSignupButton;
+    @FXML
+    private Button backToMainButton;
+    @FXML
+    private TextField citizenNewUsernameTextField;
+    @FXML
+    private PasswordField citizenSignunpasswordField;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
     }    
 
     @FXML
@@ -167,7 +180,25 @@ public class SignupCitizenSceneController implements Initializable {
     }
 
     @FXML
+    private void citizenNewUsernameTextField(ActionEvent event) {
+    }
+
+    @FXML
+    private void citizenSignunpasswordField(ActionEvent event) {
+    }
+    
+    @FXML
     private void citizenSignupButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void backToMainButtonOnClick(ActionEvent event) throws IOException {
+        Parent mainPageParent = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+        Scene mainPageScene = new Scene(mainPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(mainPageScene);
+        window.show();
     }
     
 }

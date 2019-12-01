@@ -32,3 +32,4 @@ nbdist/
 hs_err_pid*
 *.properties
 *.properties
+build/built-jar.properties

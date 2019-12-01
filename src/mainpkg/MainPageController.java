@@ -23,8 +23,6 @@ public class MainPageController implements Initializable {
     @FXML
     private TextField userNameTextField;
     @FXML
-    private PasswordField passwordTextField;
-    @FXML
     private ChoiceBox userTypeChoiceBoxLogin;
     @FXML
     private Button loginButton;
@@ -32,6 +30,8 @@ public class MainPageController implements Initializable {
     private Label forgotAccountLabel;
     @FXML
     private Label signUpAsCitizenLabel;
+    @FXML
+    private PasswordField loginPasswordField;
 
     @Override 
     public void initialize(URL url, ResourceBundle rb) {
@@ -61,7 +61,13 @@ public class MainPageController implements Initializable {
     }
 
     @FXML
-    private void signUpAsCitizenLabelOnClick(MouseEvent event) {
+    private void signUpAsCitizenLabelOnClick(MouseEvent event) throws IOException {
+        Parent signupCitizenParent = FXMLLoader.load(getClass().getResource("SignupCitizenScene.fxml"));
+        Scene signupCitizenScene = new Scene(signupCitizenParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(signupCitizenScene);
+        window.show();
     }
     
 }

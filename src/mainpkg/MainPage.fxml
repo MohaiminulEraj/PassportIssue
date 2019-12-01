@@ -115,7 +115,7 @@
                               <Font size="14.0" />
                            </font>
                         </TextField>
-                        <PasswordField fx:id="passwordTextField" prefHeight="30.0" prefWidth="228.0" promptText="password" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <PasswordField fx:id="loginPasswordField" prefHeight="30.0" prefWidth="228.0" promptText="password" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font size="14.0" />
                            </font>

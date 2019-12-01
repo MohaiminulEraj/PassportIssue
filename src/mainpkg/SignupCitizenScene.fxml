@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
@@ -21,10 +22,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="878.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="mainpkg.SignupCitizenSceneController">
+<AnchorPane id="AnchorPane" prefHeight="762.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SignupCitizenSceneController">
    <children>
-      <VBox alignment="CENTER" prefHeight="699.0" prefWidth="892.0" style="-fx-spacing: 2; -fx-background-color: #55AE3A;">
+      <VBox alignment="CENTER" prefHeight="762.0" prefWidth="892.0" style="-fx-spacing: 2; -fx-background-color: #55AE3A;">
          <children>
             <MenuBar prefHeight="25.0" prefWidth="906.0">
               <menus>
@@ -515,11 +515,51 @@
                   </VBox>
                </children>
             </HBox>
-            <Button fx:id="citizenSignupButton" mnemonicParsing="false" onAction="#citizenSignupButtonOnClick" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Sign Up" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Bold" size="14.0" />
-               </font>
-            </Button>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="892.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-spacing: 5;">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="129.0" style="-fx-text-fill: black;" text="Username:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="citizenNewUsernameTextField" onAction="#citizenNewUsernameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username used for login" style="-fx-background-color: #BDFCC9;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Label layoutX="11.0" layoutY="11.0" prefHeight="26.0" prefWidth="129.0" style="-fx-text-fill: black;" text="Password:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <PasswordField fx:id="citizenSignunpasswordField" onAction="#citizenSignunpasswordField" prefHeight="30.0" prefWidth="228.0" promptText="new password for login" style="-fx-background-color: #BDFCC9;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="892.0" style="-fx-spacing: 20;">
+               <children>
+                  <Button fx:id="backToMainButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToMainButtonOnClick" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="&lt;&lt;  Go Back" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="citizenSignupButton" mnemonicParsing="false" onAction="#citizenSignupButtonOnClick" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Sign Up" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>
