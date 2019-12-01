@@ -10,84 +10,105 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MainPageController">
    <children>
-      <VBox prefHeight="480.0" prefWidth="781.0" style="-fx-spacing: 2;">
+      <VBox prefHeight="480.0" prefWidth="671.0" style="-fx-spacing: 2;">
          <children>
-            <MenuBar>
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
+            <MenuBar style="-fx-background-color: #A6D785;">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
             </MenuBar>
-            <Label contentDisplay="TOP" prefHeight="32.0" prefWidth="782.0" style="-fx-background-color: #3B5323;" text="Passport Issue Management" textAlignment="CENTER" textFill="#f8f6f6">
+            <Label contentDisplay="TOP" prefHeight="32.0" prefWidth="782.0" style="-fx-background-color: #3B5323;" text="Passport Issue Management System" textAlignment="CENTER" textFill="#f8f6f6">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="Calibri Bold" size="35.0" />
                </font>
             </Label>
-            <HBox prefHeight="421.0" prefWidth="781.0">
+            <AnchorPane prefHeight="417.0" prefWidth="781.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #008B00;">
                <children>
-                  <VBox prefHeight="420.0" prefWidth="397.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: #228B22; -fx-border-width: 2;">
-                     <children>
-                        <Label fx:id="loginTextLabel" prefHeight="26.0" prefWidth="270.0" text="Login using existing account">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                           <padding>
-                              <Insets left="15.0" right="15.0" />
-                           </padding>
-                        </Label>
-                        <TextField fx:id="userNameTextField" onAction="#userNameTextField" promptText="username" style="-fx-background-color: #A6D785;">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                        <PasswordField fx:id="passwordTextField" promptText="password" style="-fx-background-color: #A6D785;">
-                           <font>
-                              <Font size="14.0" />
-                           </font></PasswordField>
-                        <ChoiceBox fx:id="userTypeChoiceBoxLogin" prefHeight="26.0" prefWidth="300.0" style="-fx-background-color: #A6D785;" />
-                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #3B5323;" text="Login" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font></Button>
-                     </children>
-                  </VBox>
-                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="420.0" prefWidth="384.0" style="-fx-spacing: 20; -fx-padding: 15; -fx-border-color: black; -fx-background-color: #228B22; -fx-border-width: 2;">
-                     <children>
-                        <Label fx:id="signUpLabel" prefHeight="26.0" prefWidth="270.0" text="Sign Up As:">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                           <padding>
-                              <Insets left="15.0" right="15.0" />
-                           </padding>
-                        </Label>
-                        <ChoiceBox fx:id="userTypeChoiceBoxSignUp" prefHeight="26.0" prefWidth="300.0" style="-fx-background-color: #A6D785;" />
-                        <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpButtonOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #3B5323;" text="Sign Up" textFill="#f5f5f5">
-                           <font>
-                              <Font size="14.0" />
-                           </font></Button>
-                     </children>
-                  </VBox>
+                  <Label layoutX="65.0" layoutY="37.0" prefHeight="26.0" prefWidth="330.0" style="-fx-underline: true; -fx-text-fill: black;" text="Login using existing account">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="userNameTextField" layoutX="253.0" layoutY="86.0" onAction="#userNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username" style="-fx-background-color: #A6D785;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwordTextField" layoutX="253.0" layoutY="127.0" prefHeight="30.0" prefWidth="228.0" promptText="password" style="-fx-background-color: #A6D785;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <ChoiceBox fx:id="userTypeChoiceBoxLogin" layoutX="253.0" layoutY="171.0" prefHeight="26.0" prefWidth="228.0" style="-fx-background-color: #A6D785;" />
+                  <Button fx:id="loginButton" layoutX="253.0" layoutY="218.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: #3B5323; -fx-text-fill: #00EE00;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="128.0" layoutY="88.0" prefHeight="26.0" prefWidth="125.0" style="-fx-text-fill: black;" text="Username:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="129.0" prefHeight="26.0" prefWidth="125.0" style="-fx-text-fill: black;" text="Password:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="171.0" prefHeight="26.0" prefWidth="125.0" style="-fx-text-fill: black;" text="Login as:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="forgotAccountLabel" layoutX="261.0" layoutY="278.0" onMouseClicked="#forgotAccountLabelOnClick" prefHeight="26.0" prefWidth="213.0" style="-fx-underline: true; -fx-text-fill: #00EE00;" text="Forgotten account?">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="signUpAsCitizenLabel" layoutX="206.0" layoutY="316.0" onMouseClicked="#signUpAsCitizenLabelOnClick" prefHeight="26.0" prefWidth="323.0" style="-fx-underline: true; -fx-text-fill: #00EE00;" text="You can also Signup as: Citizen">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
                </children>
-            </HBox>
+            </AnchorPane>
          </children>
       </VBox>
    </children>

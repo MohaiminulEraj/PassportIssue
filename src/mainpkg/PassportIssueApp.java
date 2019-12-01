@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class PassportIssueApp extends Application {
-    int nabila=0;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         
         Scene scene = new Scene(root);
         
+        stage.setTitle("Passport Issue Management System");
         stage.setScene(scene);
         stage.show();
      

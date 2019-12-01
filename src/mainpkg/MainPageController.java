@@ -15,12 +15,11 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class MainPageController implements Initializable {
 
-    @FXML
-    private Label loginTextLabel;
     @FXML
     private TextField userNameTextField;
     @FXML
@@ -30,11 +29,9 @@ public class MainPageController implements Initializable {
     @FXML
     private Button loginButton;
     @FXML
-    private Label signUpLabel;
+    private Label forgotAccountLabel;
     @FXML
-    private ChoiceBox<?> userTypeChoiceBoxSignUp;
-    @FXML
-    private Button signUpButton;
+    private Label signUpAsCitizenLabel;
 
     @Override 
     public void initialize(URL url, ResourceBundle rb) {
@@ -49,18 +46,22 @@ public class MainPageController implements Initializable {
     @FXML
     private void loginButtonOnClick(ActionEvent event)throws IOException {
         if(userTypeChoiceBoxLogin.getValue().toString().equals("Admin")){
-        Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
-        
-        Scene newScene = new Scene(nextnewGUI);
-        
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(newScene);
-        window.show();
+            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+
+            Scene newScene = new Scene(nextnewGUI);
+
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(newScene);
+            window.show();
         }
     }
 
     @FXML
-    private void signUpButtonOnClick(ActionEvent event) {
+    private void forgotAccountLabelOnClick(MouseEvent event) {
+    }
+
+    @FXML
+    private void signUpAsCitizenLabelOnClick(MouseEvent event) {
     }
     
 }
