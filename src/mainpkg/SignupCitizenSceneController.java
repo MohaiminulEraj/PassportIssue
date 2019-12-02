@@ -110,101 +110,27 @@ public class SignupCitizenSceneController implements Initializable {
        citizenReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
        guardianReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
        
+       secondaryCountryTextField.setDisable(true);
+       
     }    
 
-    @FXML
-    private void citizenPhoneNoTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void nationalIdTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void heightTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenEmailTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenFullNameTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenRelationGuadianTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenGuardianFullNameTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenGuardianPhoneNoTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenGuardianEmailTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPresentAddrVill(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPresentAddrRoad(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPresentAddrDirstrict(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPresentAddrPO(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPresentAddrZip(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPermanentAddrVill(ActionEvent event) {
-        
-    }
-
-    @FXML
-    private void citizenPermanentAddrRoad(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPermanentAddrDistrict(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPermanentAddrPO(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenPermanentAddrZip(ActionEvent event) {
-    }
-
-    @FXML
-    private void secondaryCountryTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenNewUsernameTextField(ActionEvent event) {
-    }
-
-    @FXML
-    private void citizenSignunpasswordField(ActionEvent event) {
-    }
     
     @FXML
-    private void citizenSignupButtonOnClick(ActionEvent event) {
+    private void citizenSignupButtonOnClick(ActionEvent event) throws IOException {
+        
+        Parent mainPageParent = FXMLLoader.load(getClass().getResource("LoginCitizenScene.fxml"));
+        Scene mainPageScene = new Scene(mainPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(mainPageScene);
+        window.show();
+        
+        
+        
         File f = null;
         FileWriter fw = null; 
+        
+        File fLoginInfo = null;
+        FileWriter fwLoginInfo = null;
         
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         String toogleGenderValue = selectedRadioButton.getText();
@@ -214,43 +140,81 @@ public class SignupCitizenSceneController implements Initializable {
         
         try {
             f = new File("CitizenSignUpForm.txt");
-            if(f.exists()) fw = new FileWriter(f,true);
+            if(f.exists()) fw = new FileWriter(f, true);
             else fw = new FileWriter(f);
+            
            
             fw.write(
-                    
             	"Personal Information: "+ citizenFullNameTextField.getText()+", "
                     +toogleGenderValue+", "
                     +localDate+", "
                     +nationalIdTextField.getText()+", "
                     +heightTextField.getText()+", "
-                    +citizenPhoneNoTextField.getText()+", "
-                    +citizenEmailTextField.getText()+", "
                     +citizenReligionChoiceBox.getValue()+", "
                     +citizenPhoneNoTextField.getText()+", "
-                    +citizenEmailTextField.getText()+"\n Present Address: "
+                    +citizenEmailTextField.getText()+
+                    "\n Present Address: "
                     +citizenPresentAddrVill.getText()+", "
                     +citizenPresentAddrRoad.getText()+", "
                     +citizenPresentAddrDistrict.getText()+", "
                     +citizenPresentAddrPO.getText()+", "
-                    +citizenPresentAddrZip.getText()+"\n Guardian Information: "
+                    +citizenPresentAddrZip.getText()+
+                    "\n Parmanent Address: "
+                    +citizenPermanentAddrVill.getText()+", "
+                    +citizenPermanentAddrRoad.getText()+", "
+                    +citizenPermanentAddrDistrict.getText()+", "
+                    +citizenPermanentAddrPO.getText()+", "
+                    +citizenPermanentAddrZip.getText()+
+                    "\n Guardian Information: "
                     +citizenRelationGuadianTextField.getText()+", "
                     +citizenGuardianFullNameTextField.getText()+", "
                     +guardianNationality+", "
                     +guardianReligionChoiceBox.getValue()+", "
                     +citizenGuardianPhoneNoTextField.getText()+", "
-                    +citizenGuardianEmailTextField.getText()+"\n "                       
-            );      
-  
+                    +citizenGuardianEmailTextField.getText()+"\n"+
+                    " Citizenship Information: "
+                    +secondaryCountryTextField.getText()+" \n\n"
+            );
+            
+            fLoginInfo = new File("LoginInfo.txt");
+            if(fLoginInfo.exists()) fwLoginInfo = new FileWriter(fLoginInfo, true);
+            else fwLoginInfo = new FileWriter(fLoginInfo);
+            
+            fwLoginInfo.write(
+                    citizenNewUsernameTextField.getText()+" "+ citizenSignunpasswordField.getText() +"\r\n"
+            );
+                 
         } catch (IOException ex) {
             Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 if(fw != null) fw.close();
+                if(fwLoginInfo != null) fwLoginInfo.close();
             } catch (IOException ex) {
                 Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        /*
+        try {
+            fLoginInfo = new File("LoginInfo.txt");
+            if(fLoginInfo.exists()) fwLoginInfo = new FileWriter(fLoginInfo, true);
+            else fwLoginInfo = new FileWriter(fLoginInfo);
+            
+            fwLoginInfo.write(
+                    citizenNewUsernameTextField.getText()+" "+ citizenSignunpasswordField.getText()
+            );
+                    
+        } catch (IOException ex) {
+            Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(fwLoginInfo != null) fwLoginInfo.close();
+            } catch (IOException ex) {
+                Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        */
+        
         
     }
 
@@ -259,22 +223,28 @@ public class SignupCitizenSceneController implements Initializable {
         Parent mainPageParent = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         Scene mainPageScene = new Scene(mainPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
         window.setScene(mainPageScene);
         window.show();
     }
 
     @FXML
-    private void isPermanentAddrSameOnClick(ActionEvent event) {
+    private void isPermanentAddrSameSelected(ActionEvent event) {
         if(isPermanentAddrSame.isSelected()){
-
                     citizenPermanentAddrVill.setText(citizenPresentAddrVill.getText());
                     citizenPermanentAddrRoad.setText(citizenPresentAddrRoad.getText());
                     citizenPermanentAddrDistrict.setText(citizenPresentAddrDistrict.getText());
                     citizenPermanentAddrPO.setText(citizenPresentAddrPO.getText());
                     citizenPermanentAddrZip.setText(citizenPresentAddrZip.getText());
                          
-                    }   
+        }  
+    }
+
+    @FXML
+    private void isDualCitizenSelected(ActionEvent event) {
+        if(isDualCitizen.isSelected())
+            secondaryCountryTextField.setDisable(false);
+        else
+            secondaryCountryTextField.setDisable(true);
     }
     
 }

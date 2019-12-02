@@ -100,7 +100,7 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="citizenPhoneNoTextField" onAction="#citizenPhoneNoTextField" prefHeight="30.0" prefWidth="228.0" promptText="phone number" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <TextField fx:id="citizenPhoneNoTextField" prefHeight="30.0" prefWidth="228.0" promptText="phone number" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -160,17 +160,17 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="nationalIdTextField" layoutX="170.0" layoutY="10.0" onAction="#nationalIdTextField" prefHeight="30.0" prefWidth="228.0" promptText="National ID no." style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="nationalIdTextField" layoutX="170.0" layoutY="10.0" prefHeight="30.0" prefWidth="228.0" promptText="National ID no." style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="heightTextField" layoutX="170.0" layoutY="106.0" onAction="#heightTextField" prefHeight="30.0" prefWidth="228.0" promptText="Heigth in ft" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="heightTextField" layoutX="170.0" layoutY="106.0" prefHeight="30.0" prefWidth="228.0" promptText="Heigth in ft" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenEmailTextField" layoutX="170.0" layoutY="170.0" onAction="#citizenEmailTextField" prefHeight="30.0" prefWidth="228.0" promptText="Email Address" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                              <TextField fx:id="citizenEmailTextField" layoutX="170.0" layoutY="170.0" prefHeight="30.0" prefWidth="228.0" promptText="Email Address" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -184,7 +184,7 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="citizenFullNameTextField" layoutX="170.0" layoutY="10.0" onAction="#citizenFullNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="full name" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+                              <TextField fx:id="citizenFullNameTextField" layoutX="170.0" layoutY="10.0" prefHeight="30.0" prefWidth="228.0" promptText="full name" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -260,12 +260,12 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="citizenRelationGuadianTextField" onAction="#citizenRelationGuadianTextField" prefHeight="30.0" prefWidth="228.0" promptText="relation with guadian" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+                              <TextField fx:id="citizenRelationGuadianTextField" prefHeight="30.0" prefWidth="228.0" promptText="relation with guadian" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenGuardianFullNameTextField" onAction="#citizenGuardianFullNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="guaridan's full name" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="citizenGuardianFullNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="guaridan's full name" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -288,12 +288,12 @@
                                  </children>
                               </HBox>
                               <ChoiceBox fx:id="guardianReligionChoiceBox" prefHeight="30.0" prefWidth="259.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField fx:id="citizenGuardianPhoneNoTextField" onAction="#citizenGuardianPhoneNoTextField" prefHeight="30.0" prefWidth="228.0" promptText="phone number" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="citizenGuardianPhoneNoTextField" prefHeight="30.0" prefWidth="228.0" promptText="phone number" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenGuardianEmailTextField" onAction="#citizenGuardianEmailTextField" prefHeight="30.0" prefWidth="228.0" promptText="Email Address" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <TextField fx:id="citizenGuardianEmailTextField" prefHeight="30.0" prefWidth="228.0" promptText="Email Address" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -363,27 +363,27 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="citizenPresentAddrVill" onAction="#citizenPresentAddrVill" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+                              <TextField fx:id="citizenPresentAddrVill" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPresentAddrRoad" layoutX="161.0" layoutY="10.0" onAction="#citizenPresentAddrRoad" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="citizenPresentAddrRoad" layoutX="161.0" layoutY="10.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPresentAddrDistrict" layoutX="161.0" layoutY="40.0" onAction="#citizenPresentAddrDirstrict" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <TextField fx:id="citizenPresentAddrDistrict" layoutX="161.0" layoutY="40.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPresentAddrPO" layoutX="161.0" layoutY="70.0" onAction="#citizenPresentAddrPO" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="citizenPresentAddrPO" layoutX="161.0" layoutY="70.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPresentAddrZip" layoutX="161.0" layoutY="100.0" onAction="#citizenPresentAddrZip" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="citizenPresentAddrZip" layoutX="161.0" layoutY="100.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -397,7 +397,7 @@
                            </font>
                         </Label>
                         <Separator layoutX="13.0" layoutY="228.0" prefWidth="200.0" />
-                        <CheckBox fx:id="isPermanentAddrSame" mnemonicParsing="false" onAction="#isPermanentAddrSameOnClick" prefHeight="22.0" prefWidth="425.0" text="Same as Present Address">
+                        <CheckBox fx:id="isPermanentAddrSame" mnemonicParsing="false" onAction="#isPermanentAddrSameSelected" prefHeight="22.0" prefWidth="425.0" text="Same as Present Address">
                            <font>
                               <Font name="Calibri" size="16.0" />
                            </font>
@@ -455,27 +455,27 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="citizenPermanentAddrVill" onAction="#citizenPermanentAddrVill" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+                              <TextField fx:id="citizenPermanentAddrVill" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPermanentAddrRoad" layoutX="161.0" layoutY="10.0" onAction="#citizenPermanentAddrRoad" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="citizenPermanentAddrRoad" layoutX="161.0" layoutY="10.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPermanentAddrDistrict" layoutX="161.0" layoutY="40.0" onAction="#citizenPermanentAddrDistrict" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <TextField fx:id="citizenPermanentAddrDistrict" layoutX="161.0" layoutY="40.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPermanentAddrPO" layoutX="161.0" layoutY="70.0" onAction="#citizenPermanentAddrPO" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="citizenPermanentAddrPO" layoutX="161.0" layoutY="70.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPermanentAddrZip" layoutX="161.0" layoutY="100.0" onAction="#citizenPermanentAddrZip" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="citizenPermanentAddrZip" layoutX="161.0" layoutY="100.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -489,7 +489,7 @@
                            </font>
                         </Label>
                         <Separator layoutX="15.0" layoutY="55.0" prefWidth="200.0" />
-                        <CheckBox fx:id="isDualCitizen" layoutX="15.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="408.0" text="Dual Citizenship">
+                        <CheckBox fx:id="isDualCitizen" layoutX="15.0" layoutY="286.0" mnemonicParsing="false" onAction="#isDualCitizenSelected" prefHeight="28.0" prefWidth="408.0" text="Dual Citizenship">
                            <font>
                               <Font name="Calibri" size="16.0" />
                            </font>
@@ -504,7 +504,7 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="secondaryCountryTextField" onAction="#secondaryCountryTextField" prefHeight="30.0" prefWidth="279.0" promptText="second country name" style="-fx-background-color: #BDFCC9;">
+                              <TextField fx:id="secondaryCountryTextField" prefHeight="30.0" prefWidth="279.0" promptText="second country name" style="-fx-background-color: #BDFCC9;">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -525,7 +525,7 @@
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="citizenNewUsernameTextField" onAction="#citizenNewUsernameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username used for login" style="-fx-background-color: #BDFCC9;">
+                  <TextField fx:id="citizenNewUsernameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username used for login" style="-fx-background-color: #BDFCC9;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -539,7 +539,7 @@
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Label>
-                  <PasswordField fx:id="citizenSignunpasswordField" onAction="#citizenSignunpasswordField" prefHeight="30.0" prefWidth="228.0" promptText="new password for login" style="-fx-background-color: #BDFCC9;">
+                  <PasswordField fx:id="citizenSignunpasswordField" prefHeight="30.0" prefWidth="228.0" promptText="new password for login" style="-fx-background-color: #BDFCC9;">
                      <font>
                         <Font size="14.0" />
                      </font>
