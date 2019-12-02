@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="citizenpkg.LoginCitizenSceneController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="475.0" prefWidth="200.0" style="-fx-background-color: #55AE3A; -fx-padding: 10; -fx-spacing: 10;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="168.0" text="Loged in as:">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="168.0" text="CITIZEN">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label prefHeight="17.0" prefWidth="188.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="citizenApplyButton" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" popupSide="RIGHT" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323;" text="Apply for" textFill="#5dfc0a">
+              <items>
+                <MenuItem fx:id="citizenApplyNewPassButton" mnemonicParsing="false" onAction="#citizenApplyNewPassButtonOnclick" text="New Passport" />
+                <MenuItem fx:id="citizenApplyReissuePassButton" mnemonicParsing="false" onAction="#citizenApplyReissuePassButtonOnclick" text="Re-Issue Passport" />
+                  <MenuItem fx:id="citizenApplyRetrievePassButton" mnemonicParsing="false" onAction="#citizenApplyRetrievePassButtonOnclick" text="Retrieve Passport" />
+              </items>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="citizenSubmitDocumentButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#citizenSubmitDocumentButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Submit Doruments" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="citizenPayPassportButton" alignment="CENTER" layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#citizenPayPassportButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Payment for passport" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="citizenTrackAppStatButton" alignment="CENTER" layoutX="20.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#citizenTrackAppStatButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Track Application Status" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="citizenReceivePassButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#citizenReceivePassButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Receive passport" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="20.0" layoutY="106.0" prefHeight="17.0" prefWidth="188.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutButton" alignment="CENTER" layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#logoutButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: red;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
