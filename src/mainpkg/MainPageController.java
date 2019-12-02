@@ -54,16 +54,16 @@ public class MainPageController implements Initializable {
             window.setScene(newScene);
             window.show();
         }
-        /*
+        
         else if(userTypeChoiceBoxLogin.getValue().toString().equals("Citizen")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("/citizenpkg/CitizenLoginScene.fxml"));
+            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("LoginCitizenScene.fxml"));
 
             Scene newScene = new Scene(nextnewGUI);
 
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(newScene);
             window.show();
-        }*/
+        }
     }
 
     @FXML

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="citizenpkg.LoginCitizenSceneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.LoginCitizenSceneController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -92,7 +92,7 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="logoutButton" alignment="CENTER" layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#logoutButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: red;" text="Log Out" textFill="WHITE">
+            <Button fx:id="logoutButton" alignment="CENTER" layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#logoutButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: red;" text="Log Out" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>

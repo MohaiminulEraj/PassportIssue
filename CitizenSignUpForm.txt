@@ -1,0 +1,5 @@
+Personal Information: era, Male, 2019-12-13, 134567, 11, 11111000, sdfdsf@gmail.com, Hinduism, 11111000, sdfdsf@gmail.com
+ Present Address: dhaka, 12, dhakadis, post, 1232
+ Guardian Information: father, jsjssss, Male, Islam, 9876543, baba@gmail.com, Personal Information: era, Male, 2019-12-13, 134567, 11, 11111000, sdfdsf@gmail.com, Hinduism, 11111000, sdfdsf@gmail.com
+ Present Address: dhaka, 12, dhakadis, post, 1232
+ Guardian Information: father, jsjssss, Male, Islam, 9876543, baba@gmail.com, 

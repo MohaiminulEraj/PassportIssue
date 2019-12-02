@@ -5,9 +5,14 @@
  */
 package mainpkg;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +23,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
@@ -30,8 +37,9 @@ import javafx.stage.Stage;
  */
 public class SignupCitizenSceneController implements Initializable {
 
+    
     @FXML
-    private TextField citizenPhoneNoTextField;
+    private TextField citizenFullNameTextField;
     @FXML
     private ToggleGroup gender;
     @FXML
@@ -41,17 +49,14 @@ public class SignupCitizenSceneController implements Initializable {
     @FXML
     private TextField citizenEmailTextField;
     @FXML
-    private ChoiceBox<?> citizenrReligionCheckBox;
-    @FXML
-    private TextField citizenFullNameTextField;
+    private TextField citizenPhoneNoTextField;
+    
     @FXML
     private TextField citizenRelationGuadianTextField;
     @FXML
     private TextField citizenGuardianFullNameTextField;
     @FXML
     private ToggleGroup guardianNationality;
-    @FXML
-    private ChoiceBox<?> citizenrGuardianReligionCheckBox;
     @FXML
     private TextField citizenGuardianPhoneNoTextField;
     @FXML
@@ -90,12 +95,20 @@ public class SignupCitizenSceneController implements Initializable {
     private TextField citizenNewUsernameTextField;
     @FXML
     private PasswordField citizenSignunpasswordField;
+    @FXML
+    private DatePicker citizenDobDatePicker;
+    @FXML
+    private ChoiceBox citizenReligionChoiceBox;
+    @FXML
+    private ChoiceBox guardianReligionChoiceBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       citizenReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
+       guardianReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
        
     }    
 
@@ -157,6 +170,7 @@ public class SignupCitizenSceneController implements Initializable {
 
     @FXML
     private void citizenPermanentAddrVill(ActionEvent event) {
+        
     }
 
     @FXML
@@ -189,6 +203,55 @@ public class SignupCitizenSceneController implements Initializable {
     
     @FXML
     private void citizenSignupButtonOnClick(ActionEvent event) {
+        File f = null;
+        FileWriter fw = null; 
+        
+        RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
+        String toogleGenderValue = selectedRadioButton.getText();
+        String guardianNationality = selectedRadioButton.getText();
+        
+        LocalDate localDate = citizenDobDatePicker.getValue();
+        
+        try {
+            f = new File("CitizenSignUpForm.txt");
+            if(f.exists()) fw = new FileWriter(f,true);
+            else fw = new FileWriter(f);
+           
+            fw.write(
+                    
+            	"Personal Information: "+ citizenFullNameTextField.getText()+", "
+                    +toogleGenderValue+", "
+                    +localDate+", "
+                    +nationalIdTextField.getText()+", "
+                    +heightTextField.getText()+", "
+                    +citizenPhoneNoTextField.getText()+", "
+                    +citizenEmailTextField.getText()+", "
+                    +citizenReligionChoiceBox.getValue()+", "
+                    +citizenPhoneNoTextField.getText()+", "
+                    +citizenEmailTextField.getText()+"\n Present Address: "
+                    +citizenPresentAddrVill.getText()+", "
+                    +citizenPresentAddrRoad.getText()+", "
+                    +citizenPresentAddrDistrict.getText()+", "
+                    +citizenPresentAddrPO.getText()+", "
+                    +citizenPresentAddrZip.getText()+"\n Guardian Information: "
+                    +citizenRelationGuadianTextField.getText()+", "
+                    +citizenGuardianFullNameTextField.getText()+", "
+                    +guardianNationality+", "
+                    +guardianReligionChoiceBox.getValue()+", "
+                    +citizenGuardianPhoneNoTextField.getText()+", "
+                    +citizenGuardianEmailTextField.getText()+"\n "                       
+            );      
+  
+        } catch (IOException ex) {
+            Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(fw != null) fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
 
     @FXML
@@ -199,6 +262,19 @@ public class SignupCitizenSceneController implements Initializable {
         
         window.setScene(mainPageScene);
         window.show();
+    }
+
+    @FXML
+    private void isPermanentAddrSameOnClick(ActionEvent event) {
+        if(isPermanentAddrSame.isSelected()){
+
+                    citizenPermanentAddrVill.setText(citizenPresentAddrVill.getText());
+                    citizenPermanentAddrRoad.setText(citizenPresentAddrRoad.getText());
+                    citizenPermanentAddrDistrict.setText(citizenPresentAddrDistrict.getText());
+                    citizenPermanentAddrPO.setText(citizenPresentAddrPO.getText());
+                    citizenPermanentAddrZip.setText(citizenPresentAddrZip.getText());
+                         
+                    }   
     }
     
 }
