@@ -24,9 +24,9 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author ERAJ
+ * @author Nabil Akhunjee
  */
-public class LoginCitizenSceneController implements Initializable {
+public class CitizenHomeSceneController implements Initializable {
 
     @FXML
     private MenuButton citizenApplyButton;
@@ -37,13 +37,13 @@ public class LoginCitizenSceneController implements Initializable {
     @FXML
     private MenuItem citizenApplyRetrievePassButton;
     @FXML
-    private Button citizenSubmitDocumentButton;
-    @FXML
     private Button citizenPayPassportButton;
     @FXML
     private Button citizenTrackAppStatButton;
     @FXML
     private Button citizenReceivePassButton;
+    @FXML
+    private Button citizenSystemRatingButton;
     @FXML
     private Button clearInterfaceButton;
     @FXML
@@ -70,10 +70,6 @@ public class LoginCitizenSceneController implements Initializable {
     }
 
     @FXML
-    private void citizenSubmitDocumentButtonOnClick(MouseEvent event) {
-    }
-
-    @FXML
     private void citizenPayPassportButtonOnClick(MouseEvent event) {
     }
 
@@ -83,6 +79,14 @@ public class LoginCitizenSceneController implements Initializable {
 
     @FXML
     private void citizenReceivePassButtonOnClick(MouseEvent event) {
+    }
+
+    @FXML
+    private void citizenSubmitDocumentButtonOnClick(MouseEvent event) {
+    }
+
+    @FXML
+    private void citizenSystemRatingButtonOnClick(ActionEvent event) {
     }
 
     @FXML
@@ -97,6 +101,10 @@ public class LoginCitizenSceneController implements Initializable {
         
         window.setScene(mainPageScene);
         window.show();
+    }
+
+    @FXML
+    private void clearInterfaceButtonOnClick(ActionEvent event) {
     }
     
 }

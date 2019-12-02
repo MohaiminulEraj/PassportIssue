@@ -173,7 +173,7 @@ public class SignupCitizenSceneController implements Initializable {
                     +citizenGuardianPhoneNoTextField.getText()+", "
                     +citizenGuardianEmailTextField.getText()+"\n"+
                     " Citizenship Information: "
-                    +secondaryCountryTextField.getText()+" \n\n"
+                    +secondaryCountryTextField.getText()+" \r\n"
             );
             
             fLoginInfo = new File("LoginInfo.txt");
@@ -193,29 +193,7 @@ public class SignupCitizenSceneController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-        /*
-        try {
-            fLoginInfo = new File("LoginInfo.txt");
-            if(fLoginInfo.exists()) fwLoginInfo = new FileWriter(fLoginInfo, true);
-            else fwLoginInfo = new FileWriter(fLoginInfo);
-            
-            fwLoginInfo.write(
-                    citizenNewUsernameTextField.getText()+" "+ citizenSignunpasswordField.getText()
-            );
-                    
-        } catch (IOException ex) {
-            Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if(fwLoginInfo != null) fwLoginInfo.close();
-            } catch (IOException ex) {
-                Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        */
-        
-        
+        } 
     }
 
     @FXML

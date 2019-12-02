@@ -7,11 +7,12 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.LoginCitizenSceneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.CitizenHomeSceneController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -62,11 +63,6 @@
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </MenuButton>
-            <Button fx:id="citizenSubmitDocumentButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#citizenSubmitDocumentButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Submit Doruments" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Bold" size="14.0" />
-               </font>
-            </Button>
             <Button fx:id="citizenPayPassportButton" alignment="CENTER" layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#citizenPayPassportButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Payment for passport" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
@@ -82,7 +78,12 @@
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
+            <Button fx:id="citizenSystemRatingButton" alignment="CENTER" mnemonicParsing="false" onAction="#citizenSystemRatingButtonOnClick" onMouseClicked="#citizenSubmitDocumentButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Rate This System" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearInterfaceButtonOnClick" onMouseClicked="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
@@ -100,4 +101,11 @@
          </children>
       </VBox>
    </left>
+   <right>
+      <TextArea prefHeight="475.0" prefWidth="245.0" promptText="Citizen Details" style="-fx-padding: 5;" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </TextArea>
+   </right>
 </BorderPane>
