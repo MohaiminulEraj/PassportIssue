@@ -25,13 +25,15 @@ public class AdminHomeSceneController implements Initializable {
     @FXML
     private Button logoutButton;
     @FXML
-    private Button empReceivePassportAppButton;
+    private Button adminAddNewUserButton;
     @FXML
-    private Button empObserveApplicationButton;
+    private Button adminRemoveExistingUserButton;
     @FXML
-    private Button empRequPoliceToVerifyButton;
+    private Button adminCreateChartButton;
     @FXML
-    private Button empContactWithSupplierButton;
+    private Button adminEmpSalaryDisButton;
+    @FXML
+    private Button adminObserveEvaluationButton;
 
     /**
      * Initializes the controller class.
@@ -74,19 +76,23 @@ public class AdminHomeSceneController implements Initializable {
     }
 
     @FXML
-    private void empReceivePassportAppButtonOnClick(ActionEvent event) {
+    private void adminAddNewUserButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void empObserveApplicationButtonOnClick(ActionEvent event) {
+    private void adminRemoveExistingUserButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void empRequPoliceToVerifyButtonOnClick(ActionEvent event) {
+    private void adminCreateChartButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void empContactWithSupplierButtonOnClick(ActionEvent event) {
+    private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void adminObserveEvaluationButtonOnClick(ActionEvent event) {
     }
     
 }

@@ -2,7 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -120,7 +120,7 @@
                               <Font size="14.0" />
                            </font>
                         </PasswordField>
-                        <ChoiceBox fx:id="userTypeChoiceBoxLogin" prefHeight="26.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="userTypeComboBoxLogin" prefHeight="32.0" prefWidth="349.0" promptText="user type" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                </children>

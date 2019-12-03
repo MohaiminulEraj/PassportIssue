@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -23,8 +24,6 @@ public class MainPageController implements Initializable {
     @FXML
     private TextField userNameTextField;
     @FXML
-    private ChoiceBox userTypeChoiceBoxLogin;
-    @FXML
     private Button loginButton;
     @FXML
     private Label forgotAccountLabel;
@@ -32,10 +31,12 @@ public class MainPageController implements Initializable {
     private Label signUpAsCitizenLabel;
     @FXML
     private PasswordField loginPasswordField;
+    @FXML
+    private ComboBox userTypeComboBoxLogin;
 
     @Override 
     public void initialize(URL url, ResourceBundle rb) {
-        userTypeChoiceBoxLogin.getItems().addAll("Admin","Home Ministry", "Citizen","Employee","Police");
+        userTypeComboBoxLogin.getItems().addAll("Admin","Home Ministry", "Citizen","Employee","Police");
     }    
     
     @FXML
@@ -45,25 +46,25 @@ public class MainPageController implements Initializable {
 
     @FXML
     private void loginButtonOnClick(ActionEvent event)throws IOException {
-        if(userTypeChoiceBoxLogin.getValue().toString().equals("Admin")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
+            if(userTypeComboBoxLogin.getValue().toString().equals("Admin")){
+                Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
 
-            Scene newScene = new Scene(nextnewGUI);
+                Scene newScene = new Scene(nextnewGUI);
 
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(newScene);
-            window.show();
-        }
-        
-        else if(userTypeChoiceBoxLogin.getValue().toString().equals("Citizen")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
+                Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                window.setScene(newScene);
+                window.show();
+            }
+            
+            else if(userTypeComboBoxLogin.getValue().toString().equals("Citizen")){
+                Parent nextnewGUI = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
 
-            Scene newScene = new Scene(nextnewGUI);
+                Scene newScene = new Scene(nextnewGUI);
 
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(newScene);
-            window.show();
-        }
+                Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                window.setScene(newScene);
+                window.show();
+            }
     }
 
     @FXML
@@ -86,5 +87,15 @@ public class MainPageController implements Initializable {
         window.setScene(signupCitizenScene);
         window.show();
     }
+    
+    /* public void changSceneOnUserType(String userHomeScene) throws IOException{
+    Parent nextnewGUI = FXMLLoader.load(getClass().getResource(userHomeScene));
+    
+    Scene newScene = new Scene(nextnewGUI);
+    
+    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    window.setScene(newScene);
+    window.show();
+    }*/
     
 }
