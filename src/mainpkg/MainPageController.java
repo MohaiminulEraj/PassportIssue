@@ -46,7 +46,7 @@ public class MainPageController implements Initializable {
     @FXML
     private void loginButtonOnClick(ActionEvent event)throws IOException {
         if(userTypeChoiceBoxLogin.getValue().toString().equals("Admin")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
 
             Scene newScene = new Scene(nextnewGUI);
 
@@ -56,7 +56,7 @@ public class MainPageController implements Initializable {
         }
         
         else if(userTypeChoiceBoxLogin.getValue().toString().equals("Citizen")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("LoginCitizenScene.fxml"));
+            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
 
             Scene newScene = new Scene(nextnewGUI);
 

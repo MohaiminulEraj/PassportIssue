@@ -118,7 +118,7 @@ public class SignupCitizenSceneController implements Initializable {
     @FXML
     private void citizenSignupButtonOnClick(ActionEvent event) throws IOException {
         
-        Parent mainPageParent = FXMLLoader.load(getClass().getResource("LoginCitizenScene.fxml"));
+        Parent mainPageParent = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
         Scene mainPageScene = new Scene(mainPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(mainPageScene);
