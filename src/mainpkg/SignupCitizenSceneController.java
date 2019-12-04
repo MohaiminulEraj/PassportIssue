@@ -181,7 +181,7 @@ public class SignupCitizenSceneController implements Initializable {
             else fwLoginInfo = new FileWriter(fLoginInfo);
             
             fwLoginInfo.write(
-                    citizenNewUsernameTextField.getText()+" "+ citizenSignunpasswordField.getText() +"\r\n"
+                    citizenEmailTextField.getText()+" "+ citizenSignunpasswordField.getText() + " Citizen"+"\r\n"
             );
                  
         } catch (IOException ex) {

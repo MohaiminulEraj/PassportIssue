@@ -1,0 +1,20 @@
+Personal Information: asdas, Male, 2016-12-10, 987654, 7, Islam, 34654357, dstetrgrtgew
+ Present Address: safaf, 12, sda, 23asd, 123
+ Parmanent Address: , , , , 
+ Guardian Information: fasfasf, awsefsaf, Male, Islam, 98765, asdfaf
+ Citizenship Information:  
+Personal Information: qwe, Male, 2019-12-05, 432, 4, Hinduism, 5325325, sdzxds
+ Present Address: ssdf, 123, sad, 23qew, 213
+ Parmanent Address: ssdf, 123, sad, 23qew, 213
+ Guardian Information: esad, sdzx, Male, Hinduism, 24334, erwAFSF
+ Citizenship Information:  
+Personal Information: nabila, Female, 2019-12-06, 12342342, 9, Hinduism, 1234321414, nabila@nabilaapi.com
+ Present Address: sdds, 213, dadsa, wqwd, 13212
+ Parmanent Address: sdds, 213, dadsa, wqwd, 13212
+ Guardian Information: Khalamma, alua, Female, Islam, 1232421, Khalamma
+ Citizenship Information:  
+Personal Information: qwdasd, Male, 2019-12-27, 21312, 7, Christianity, 123124, nabila@apu.com
+ Present Address: qweqe, 213, asdaad, kda, 1234
+ Parmanent Address: qweqe, 213, asdaad, kda, 1234
+ Guardian Information: Hooker, Nabil, Male, Buddhism, 123123, Hooker@porn.com
+ Citizenship Information:  
