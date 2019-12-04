@@ -5,7 +5,10 @@
  */
 package mainpkg;
 
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
@@ -132,6 +135,11 @@ public class SignupCitizenSceneController implements Initializable {
         File fLoginInfo = null;
         FileWriter fwLoginInfo = null;
         
+        File fBin = null;
+        FileOutputStream fos = null;
+        BufferedOutputStream bos = null;
+        DataOutputStream dos = null;
+        
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         String toogleGenderValue = selectedRadioButton.getText();
         String guardianNationality = selectedRadioButton.getText();
@@ -143,37 +151,36 @@ public class SignupCitizenSceneController implements Initializable {
             if(f.exists()) fw = new FileWriter(f, true);
             else fw = new FileWriter(f);
             
-           
             fw.write(
-            	"Personal Information: "+ citizenFullNameTextField.getText()+", "
-                    +toogleGenderValue+", "
-                    +localDate+", "
-                    +nationalIdTextField.getText()+", "
-                    +heightTextField.getText()+", "
-                    +citizenReligionChoiceBox.getValue()+", "
-                    +citizenPhoneNoTextField.getText()+", "
+            	"Personal Information: "+ citizenFullNameTextField.getText()+" "
+                    +toogleGenderValue+" "
+                    +localDate+" "
+                    +nationalIdTextField.getText()+" "
+                    +heightTextField.getText()+" "
+                    +citizenReligionChoiceBox.getValue()+" "
+                    +citizenPhoneNoTextField.getText()+" "
                     +citizenEmailTextField.getText()+
-                    "\n Present Address: "
-                    +citizenPresentAddrVill.getText()+", "
-                    +citizenPresentAddrRoad.getText()+", "
-                    +citizenPresentAddrDistrict.getText()+", "
-                    +citizenPresentAddrPO.getText()+", "
+                    "Present Address: "
+                    +citizenPresentAddrVill.getText()+" "
+                    +citizenPresentAddrRoad.getText()+" "
+                    +citizenPresentAddrDistrict.getText()+" "
+                    +citizenPresentAddrPO.getText()+" "
                     +citizenPresentAddrZip.getText()+
-                    "\n Parmanent Address: "
-                    +citizenPermanentAddrVill.getText()+", "
-                    +citizenPermanentAddrRoad.getText()+", "
-                    +citizenPermanentAddrDistrict.getText()+", "
-                    +citizenPermanentAddrPO.getText()+", "
+                    "Parmanent Address: "
+                    +citizenPermanentAddrVill.getText()+" "
+                    +citizenPermanentAddrRoad.getText()+" "
+                    +citizenPermanentAddrDistrict.getText()+" "
+                    +citizenPermanentAddrPO.getText()+" "
                     +citizenPermanentAddrZip.getText()+
-                    "\n Guardian Information: "
-                    +citizenRelationGuadianTextField.getText()+", "
-                    +citizenGuardianFullNameTextField.getText()+", "
-                    +guardianNationality+", "
-                    +guardianReligionChoiceBox.getValue()+", "
-                    +citizenGuardianPhoneNoTextField.getText()+", "
-                    +citizenGuardianEmailTextField.getText()+"\n"+
+                    "Guardian Information: "
+                    +citizenRelationGuadianTextField.getText()+" "
+                    +citizenGuardianFullNameTextField.getText()+" "
+                    +guardianNationality+" "
+                    +guardianReligionChoiceBox.getValue()+" "
+                    +citizenGuardianPhoneNoTextField.getText()+" "
+                    +citizenGuardianEmailTextField.getText()+" "+
                     " Citizenship Information: "
-                    +secondaryCountryTextField.getText()+" \r\n"
+                    +secondaryCountryTextField.getText()+" "
             );
             
             fLoginInfo = new File("LoginInfo.txt");
@@ -181,8 +188,19 @@ public class SignupCitizenSceneController implements Initializable {
             else fwLoginInfo = new FileWriter(fLoginInfo);
             
             fwLoginInfo.write(
-                    citizenEmailTextField.getText()+" "+ citizenSignunpasswordField.getText() + " Citizen"+"\r\n"
+                    citizenEmailTextField.getText()+" "+ citizenSignunpasswordField.getText() + " Citizen "
             );
+            
+            fBin = new File("loginInfo.bin");
+            if(fBin.exists()) fos = new FileOutputStream(fBin,true);
+            else fos = new FileOutputStream(fBin);
+            
+            bos = new BufferedOutputStream(fos);
+            dos = new DataOutputStream(bos);
+            
+            dos.writeUTF(citizenEmailTextField.getText());
+            dos.writeUTF(citizenSignunpasswordField.getText());
+            dos.writeUTF("Citizen ");
                  
         } catch (IOException ex) {
             Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
@@ -190,6 +208,7 @@ public class SignupCitizenSceneController implements Initializable {
             try {
                 if(fw != null) fw.close();
                 if(fwLoginInfo != null) fwLoginInfo.close();
+                if(dos != null) dos.close();
             } catch (IOException ex) {
                 Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }
