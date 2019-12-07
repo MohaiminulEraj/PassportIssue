@@ -54,11 +54,12 @@ public class MainPageController implements Initializable {
     private void loginButtonOnClick(ActionEvent event)throws IOException {
     String uN = userNameTextField.getText();
     String uP = loginPasswordField.getText();
+    String uG = userTypeComboBoxLogin.getValue().toString();
         boolean found = false;
         String tempUsername ="";
         String tempPassword ="";
         String tempGroup="";
-        File f = new File("loginInfo.bin");
+        File f = null; // new File("loginInfo.bin");
         FileInputStream fis = null;
         BufferedInputStream bis = null;
         DataInputStream dis = null;
@@ -67,22 +68,51 @@ public class MainPageController implements Initializable {
                 
         try{
 
-            f = new File("Emp.bin");
+            f = new File("loginInfo.bin");
+            String str="";
             if(!f.exists()){
                 System.out.println("file nai :3");
             }
+            
             else{
                 
-                fis = new FileInputStream(f);
-                bis = new BufferedInputStream(fis);
-                dis = new DataInputStream(bis);
-                String str="";
+                fis = new FileInputStream("loginInfo.bin");
+                //bis = new BufferedInputStream(fis);
+                dis = new DataInputStream(fis);
+                
                 
                 while(true){
                     str+= dis.readUTF()
                          +dis.readUTF()
                          +dis.readUTF();
                 }
+            }
+            String[] user = str.split(",");
+            
+            for(int i=0; i<= (user.length-3); i=i+3){
+            System.out.println("User: "+ user[i]);
+                if(uN == user[i] && uP == user[i+1] && uG  == user[i+2]){
+            
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("CitizenHomeScene.fxml"));
+                    //Parent personViewParent = loader.load();
+                    Parent nextnewGUI = loader.load(); //FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
+            
+                    Scene newScene = new Scene(nextnewGUI);
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    window.setScene(newScene);
+                    window.show();
+                    found = true;
+            }
+                if(uN.equals("Nabil") && uP.equals("Eraj") && uG.equals("Admin")){
+            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
+            
+            Scene newScene = new Scene(nextnewGUI);
+            
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(newScene);
+            window.show();
+            }
             }
             /*sc.useDelimiter(" ");           // Space diya separate krtesi
             while(sc.hasNextLine() && !found){
@@ -104,15 +134,7 @@ public class MainPageController implements Initializable {
             window.show();
             found = true;
             }
-            if(uN.equals("Nabil") && uP.equals("Eraj") && userTypeComboBoxLogin.getValue().toString().equals("Admin")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
             
-            Scene newScene = new Scene(nextnewGUI);
-            
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(newScene);
-            window.show();
-            }
             if(uN.equals(tempUsername) && uP.equals(tempPassword) && userTypeComboBoxLogin.getValue().toString().equals("Police")){
             
             FXMLLoader loader = new FXMLLoader();

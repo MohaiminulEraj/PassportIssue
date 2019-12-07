@@ -122,12 +122,9 @@ public class SignupCitizenSceneController implements Initializable {
     @FXML
     private void citizenSignupButtonOnClick(ActionEvent event) throws IOException {
         
-        Parent mainPageParent = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
-        Scene mainPageScene = new Scene(mainPageParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(mainPageScene);
-        window.show();
         
+        
+        boolean signupable = false;
         
         
         File f = null;
@@ -146,7 +143,27 @@ public class SignupCitizenSceneController implements Initializable {
         String guardianNationality = selectedRadioButton.getText();
         
         LocalDate localDate = citizenDobDatePicker.getValue();
+        String cEmail = citizenEmailTextField.getText();
+        String cPass;
         
+        String[] atS = cEmail.split("@");
+        String[] dotS = cEmail.split("\\.");
+        for(int i=0; i<dotS.length; i++){
+            if(atS.length>1 && dotS.length>1){
+                cPass = citizenSignunpasswordField.getText();
+                if(!cPass.isEmpty()){
+                signupable = true;
+                } 
+                else {
+                    
+                    warningLabel.setText("Password Required!!!");
+                }
+            }
+            else {
+            warningLabel.setText("Invalid Email Address!!!");
+        }
+        }
+        if(signupable == true){
         try {
             f = new File("CitizenSignUpForm.txt");
             if(f.exists()) fw = new FileWriter(f, true);
@@ -199,9 +216,9 @@ public class SignupCitizenSceneController implements Initializable {
             bos = new BufferedOutputStream(fos);
             dos = new DataOutputStream(bos);
             
-            dos.writeUTF(citizenEmailTextField.getText());
-            dos.writeUTF(citizenSignunpasswordField.getText());
-            dos.writeUTF("Citizen ");
+            dos.writeUTF(citizenEmailTextField.getText()+","+citizenSignunpasswordField.getText()+","+"Citizen"+",");
+            //dos.writeUTF(citizenSignunpasswordField.getText());
+            //dos.writeUTF("Citizen ");
                  
         } catch (IOException ex) {
             Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
@@ -213,7 +230,13 @@ public class SignupCitizenSceneController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } 
+        }
+        Parent mainPageParent = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
+        Scene mainPageScene = new Scene(mainPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(mainPageScene);
+        window.show();
+     }   
     }
 
     @FXML
