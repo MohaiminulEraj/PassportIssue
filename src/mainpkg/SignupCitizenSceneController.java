@@ -27,6 +27,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -95,8 +96,6 @@ public class SignupCitizenSceneController implements Initializable {
     @FXML
     private Button backToMainButton;
     @FXML
-    private TextField citizenNewUsernameTextField;
-    @FXML
     private PasswordField citizenSignunpasswordField;
     @FXML
     private DatePicker citizenDobDatePicker;
@@ -104,6 +103,8 @@ public class SignupCitizenSceneController implements Initializable {
     private ChoiceBox citizenReligionChoiceBox;
     @FXML
     private ChoiceBox guardianReligionChoiceBox;
+    @FXML
+    private Label warningLabel;
 
     /**
      * Initializes the controller class.

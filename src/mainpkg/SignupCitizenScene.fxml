@@ -170,7 +170,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenEmailTextField" layoutX="170.0" layoutY="170.0" prefHeight="30.0" prefWidth="228.0" promptText="Email Address" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                              <TextField fx:id="citizenEmailTextField" layoutX="170.0" layoutY="170.0" prefHeight="30.0" prefWidth="228.0" promptText="Email Address (will be used for login)" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -515,9 +515,17 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="892.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-spacing: 5;">
+            <GridPane alignment="CENTER" prefHeight="46.0" prefWidth="892.0" style="-fx-border-color: black;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="145.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="510.0" minWidth="10.0" prefWidth="254.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="541.0" minWidth="10.0" prefWidth="491.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <Label prefHeight="26.0" prefWidth="129.0" style="-fx-text-fill: black;" text="Username:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="140.0" style="-fx-text-fill: black;" text="Password:">
                      <font>
                         <Font name="Calibri" size="20.0" />
                      </font>
@@ -525,28 +533,19 @@
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Label>
-                  <TextField fx:id="citizenNewUsernameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username used for login" style="-fx-background-color: #BDFCC9;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </TextField>
-                  <Separator orientation="VERTICAL" prefHeight="200.0" />
-                  <Label layoutX="11.0" layoutY="11.0" prefHeight="26.0" prefWidth="129.0" style="-fx-text-fill: black;" text="Password:">
-                     <font>
-                        <Font name="Calibri" size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets left="15.0" right="15.0" />
-                     </padding>
-                  </Label>
-                  <PasswordField fx:id="citizenSignunpasswordField" prefHeight="30.0" prefWidth="228.0" promptText="new password for login" style="-fx-background-color: #BDFCC9;">
+                  <PasswordField fx:id="citizenSignunpasswordField" prefHeight="30.0" prefWidth="228.0" promptText="new password for login" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </PasswordField>
+                  <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="505.0" text="warningLabel" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                  </Label>
                </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="892.0" style="-fx-spacing: 20;">
+            </GridPane>
+            <HBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="892.0" style="-fx-spacing: 20;">
                <children>
                   <Button fx:id="backToMainButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backToMainButtonOnClick" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="&lt;&lt;  Go Back" textFill="WHITE">
                      <font>
