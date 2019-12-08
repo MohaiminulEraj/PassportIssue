@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -137,7 +138,7 @@ public class SignupCitizenSceneController implements Initializable {
         FileOutputStream fos = null;
         BufferedOutputStream bos = null;
         DataOutputStream dos = null;
-        
+        ObjectOutputStream oos = null;
         RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
         String toogleGenderValue = selectedRadioButton.getText();
         String guardianNationality = selectedRadioButton.getText();
@@ -208,25 +209,31 @@ public class SignupCitizenSceneController implements Initializable {
             fwLoginInfo.write(
                     citizenEmailTextField.getText()+" "+ citizenSignunpasswordField.getText() + " Citizen "
             );
-            
+            /*
             fBin = new File("loginInfo.bin");
             if(fBin.exists()) fos = new FileOutputStream(fBin,true);
             else fos = new FileOutputStream(fBin);
             
+            //fos = new FileOutputStream("loginInfo.bin");
+            //oos = new ObjectOutputStream(fos);
             bos = new BufferedOutputStream(fos);
             dos = new DataOutputStream(bos);
             
-            dos.writeUTF(citizenEmailTextField.getText()+","+citizenSignunpasswordField.getText()+","+"Citizen"+",");
+            String sr=citizenEmailTextField.getText()+","+citizenSignunpasswordField.getText()+",Citizen";
+            dos.writeUTF(sr);
+            System.out.println(sr);
             //dos.writeUTF(citizenSignunpasswordField.getText());
             //dos.writeUTF("Citizen ");
-                 
+             */    
         } catch (IOException ex) {
             Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
+                //if(oos != null) oos.close();
+                if(dos != null) dos.close();
                 if(fw != null) fw.close();
                 if(fwLoginInfo != null) fwLoginInfo.close();
-                if(dos != null) dos.close();
+                
             } catch (IOException ex) {
                 Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }

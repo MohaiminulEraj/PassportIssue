@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -63,35 +65,70 @@ public class MainPageController implements Initializable {
         FileInputStream fis = null;
         BufferedInputStream bis = null;
         DataInputStream dis = null;
-        
-                //Scanner sc=new Scanner (f);
+        FileReader fr = null;
+        ObjectInputStream ois = null;
+                
                 
         try{
-
+            f = new File("LoginInfo.txt");
+            if(!f.exists()) System.out.println("File Not Found");
+            
+            Scanner sc=new Scanner (f);
+            /*    
             f = new File("loginInfo.bin");
             String str="";
+            String str2="";
             if(!f.exists()){
                 System.out.println("file nai :3");
             }
             
             else{
                 
-                fis = new FileInputStream("loginInfo.bin");
-                //bis = new BufferedInputStream(fis);
-                dis = new DataInputStream(fis);
-                
-                
-                while(true){
-                    str+= dis.readUTF()
-                         +dis.readUTF()
-                         +dis.readUTF();
+                fis = new FileInputStream(f);
+                bis = new BufferedInputStream(fis);
+                dis = new DataInputStream(bis);
+                //String[] ss = str.split("\\?");
+                Scanner sc = new Scanner(bis);
+                //fr = new FileReader(dis);
+                //ois = new ObjectInputStream(fis);
+                //str = dis.readUTF();
+                while(sc.hasNextLine()){
+                    str2 += dis.readUTF();
+                    
+                    //str += sc.nextLine();
                 }
+                   dis.close();
+                  sc.close();
+                /*
+                while(true){
+                str += dis.readUTF();
+                      
+                }
+                */
+                //System.out.println("Str: "+ str);
+                /* 
+                while(true){
+                    str+= ois.readObject()
+                         +ois.readUTF()
+                         +ois.readUTF();
+//                    str+= dis.readUTF()
+//                         +dis.readUTF()
+//                         +dis.readUTF();
+                }
+                
             }
-            String[] user = str.split(",");
+            System.out.println("Str: "+str);
             
-            for(int i=0; i<= (user.length-3); i=i+3){
-            System.out.println("User: "+ user[i]);
-                if(uN == user[i] && uP == user[i+1] && uG  == user[i+2]){
+            String[] user = str2.split(",");
+//            for(int i=0; i<= user.length; i++){
+//                System.out.println(user[i]);
+//            }
+            System.out.println("usER len: "+ user.length);
+            for(int i=0; i< user.length; i++){
+                String a = user[i];
+                String[] ar = a.split(",");
+            System.out.println("User: "+ ar[i]);
+                if(uN.equals(ar[i])  && uP.equals(ar[i+1]) && uG.equals(ar[i+2])){
             
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("CitizenHomeScene.fxml"));
@@ -102,9 +139,10 @@ public class MainPageController implements Initializable {
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                     window.setScene(newScene);
                     window.show();
-                    found = true;
+                   // found = true;
             }
-                if(uN.equals("Nabil") && uP.equals("Eraj") && uG.equals("Admin")){
+                */
+           if(uN.equals("Nabil") && uP.equals("Eraj") && uG.equals("Admin")){
             Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
             
             Scene newScene = new Scene(nextnewGUI);
@@ -113,8 +151,8 @@ public class MainPageController implements Initializable {
             window.setScene(newScene);
             window.show();
             }
-            }
-            /*sc.useDelimiter(" ");           // Space diya separate krtesi
+            
+            sc.useDelimiter(" ");           
             while(sc.hasNextLine() && !found){
             tempUsername = sc.next();
             tempPassword = sc.next();
@@ -149,14 +187,16 @@ public class MainPageController implements Initializable {
             found = true;
             }
             
-            }*/
             
+    }   
             //sc.close();
-            } catch(Exception e){
+            
+        }catch(Exception e){
                 System.out.println(e);
             } finally{
             try{
                 if(dis != null) dis.close();
+               // if(ois != null) ois.close();
             } catch(Exception e){
                 System.out.println(e);
             }
