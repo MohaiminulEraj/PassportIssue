@@ -33,21 +33,21 @@ public class AdminHomeSceneController implements Initializable {
     @FXML
     private BorderPane borderpane;
     @FXML
-    private Button adminAddNewUserButton;
-    @FXML
-    private Button adminRemoveExistingUserButton;
-    @FXML
-    private Button adminEmpSalaryDisButton;
-    @FXML
     private Button clearInterfaceButton;
     @FXML
     private Button logoutButton;
+    @FXML
+    private Button adminAddNewUserButton;
+    @FXML
+    private Button adminRemoveExistingUserButton;
     @FXML
     private MenuItem pieChartButton;
     @FXML
     private MenuItem barChartButton;
     @FXML
     private MenuItem lineChartButton;
+    @FXML
+    private Button adminEmpSalaryDisButton;
 
     /**
      * Initializes the controller class.
@@ -72,9 +72,6 @@ public class AdminHomeSceneController implements Initializable {
         loadUI("AdminAddNewUser");
     }
 
-    @FXML
-    private void adminRemoveExistingUserButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void pieChartButton(ActionEvent event) {
@@ -91,9 +88,6 @@ public class AdminHomeSceneController implements Initializable {
         loadUI("CreateLineChart");
     }
     
-    @FXML
-    private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
-    }
     
     @FXML
     private void clearInterfaceButtonOnClick(ActionEvent event) {
@@ -109,5 +103,14 @@ public class AdminHomeSceneController implements Initializable {
         window.setScene(mainPageScene);
         window.show();
     }
+
+    @FXML
+    private void adminRemoveExistingUserButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
+    }
+
     
 }
