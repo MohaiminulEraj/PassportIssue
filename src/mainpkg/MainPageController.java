@@ -50,7 +50,7 @@ public class MainPageController implements Initializable {
     
     @Override 
     public void initialize(URL url, ResourceBundle rb) {
-        userTypeComboBoxLogin.getItems().addAll("Admin","Home Ministry", "Citizen","Employee","Police");
+        userTypeComboBoxLogin.getItems().addAll("Admin","Home Ministry", "Citizen","Employee","Police","Supplier");
     }    
     
 
@@ -76,26 +76,51 @@ public class MainPageController implements Initializable {
             if(arr[i].equals(uN) && arr[i+1].equals(uP) && arr[i+2].equals(uG)){
                 if(uG.equals("Admin")){
                     Parent admin = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
-                    Scene signupCitizenScene = new Scene(admin);
+                    Scene loginScene = new Scene(admin);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
-                    window.setScene(signupCitizenScene);
+                    window.setScene(loginScene);
                     window.show();
                 }
-                else if(uG.equals("Citizen")){
-                    Parent citizen = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
-                    Scene signupCitizenScene = new Scene(citizen);
+                else if(uG.equals("Home Ministry")){
+                    Parent homeMinistry = FXMLLoader.load(getClass().getResource("HomeMinistryHomeScene.fxml"));
+                    Scene loginScene = new Scene(homeMinistry);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
-                    window.setScene(signupCitizenScene);
+                    window.setScene(loginScene);
+                    window.show();
+                }
+                
+                else if(uG.equals("Citizen")){
+                    Parent citizen = FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
+                    Scene loginScene = new Scene(citizen);
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+                    window.setScene(loginScene);
                     window.show();
                 }
                 else if(uG.equals("Police")){
                     Parent police = FXMLLoader.load(getClass().getResource("PoliceHomeScene.fxml"));
-                    Scene signupCitizenScene = new Scene(police);
+                    Scene loginScene = new Scene(police);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
-                    window.setScene(signupCitizenScene);
+                    window.setScene(loginScene);
+                    window.show();
+                }
+                else if(uG.equals("Employee")){
+                    Parent employee = FXMLLoader.load(getClass().getResource("EmployeeHomeScene.fxml"));
+                    Scene loginScene = new Scene(employee);
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+                    window.setScene(loginScene);
+                    window.show();
+                }
+                else if(uG.equals("Supplier")){
+                    Parent supplier = FXMLLoader.load(getClass().getResource("SuppilerHomeScene.fxml"));
+                    Scene loginScene = new Scene(supplier);
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+                    window.setScene(loginScene);
                     window.show();
                 }
                 err=false;
