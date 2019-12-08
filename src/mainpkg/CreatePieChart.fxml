@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #55AE3A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.CreatePieChartController">
+   <children>
+      <GridPane hgap="5.0" layoutX="16.0" layoutY="14.0" prefHeight="30.0" prefWidth="474.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="genderRB" mnemonicParsing="false" prefHeight="33.0" prefWidth="193.0" selected="true" text="Gender">
+               <toggleGroup>
+                  <ToggleGroup fx:id="chart" />
+               </toggleGroup>
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="religionRB" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="193.0" text="Religion" toggleGroup="$chart" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="divisionRB" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="193.0" text="Division" toggleGroup="$chart" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </GridPane>
+      <Button fx:id="LoadChartButton" layoutX="200.0" layoutY="50.0" mnemonicParsing="false" onAction="#LoadChartButtonOnClick" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Load Chart" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <PieChart fx:id="pieChart" layoutY="90.0" prefHeight="310.0" prefWidth="500.0" style="-fx-border-color: black;" />
+      <Label fx:id="statLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="44.0" prefHeight="36.0" prefWidth="172.0" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

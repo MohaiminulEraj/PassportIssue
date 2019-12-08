@@ -47,17 +47,14 @@ public class MainPageController implements Initializable {
         userTypeComboBoxLogin.getItems().addAll("Admin","Home Ministry", "Citizen","Employee","Police");
     }    
     
-    @FXML
-    private void userNameTextField(ActionEvent event) {
-        
-    }
 
     @FXML
     private void loginButtonOnClick(ActionEvent event)throws IOException {
     String uN = userNameTextField.getText();
     String uP = loginPasswordField.getText();
     String uG = userTypeComboBoxLogin.getValue().toString();
-        boolean found = false;
+        boolean found = false
+                ;
         String tempUsername ="";
         String tempPassword ="";
         String tempGroup="";
@@ -159,10 +156,10 @@ public class MainPageController implements Initializable {
             tempGroup = sc.next();
             //if(tempUsername.trim().equals(uN.trim()) && tempPassword.trim().equals(Up.trim())
             //if(tempUsername.trim().equals(uN.trim()) && tempPassword.trim().equals(uP.trim()) && userTypeComboBoxLogin.getValue().toString().equals("Citizen")){
-            if(uN.equals(tempUsername) && uP.equals(tempPassword) && userTypeComboBoxLogin.getValue().toString().equals("Citizen")){
+            if(uN.equals("n") && uP.equals("n") && userTypeComboBoxLogin.getValue().toString().equals("Admin")){
             
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("CitizenHomeScene.fxml"));
+            loader.setLocation(getClass().getResource("AdminHomeScene.fxml"));
             //Parent personViewParent = loader.load();
             Parent nextnewGUI = loader.load(); //FXMLLoader.load(getClass().getResource("CitizenHomeScene.fxml"));
             

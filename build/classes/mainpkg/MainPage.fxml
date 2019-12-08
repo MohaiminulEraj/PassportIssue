@@ -110,7 +110,7 @@
                               <Insets left="15.0" right="15.0" />
                            </padding>
                         </Label>
-                        <TextField fx:id="userNameTextField" onAction="#userNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+                        <TextField fx:id="userNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                            <font>
                               <Font size="14.0" />
                            </font>

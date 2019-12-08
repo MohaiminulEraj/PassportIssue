@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -53,27 +54,32 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="adminAddNewUserButton" alignment="CENTER" mnemonicParsing="false" onAction="#adminAddNewUserButtonOnClick" onMouseClicked="#citizenSubmitDocumentButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Add New User" textFill="WHITE">
+            <Button fx:id="adminAddNewUserButton" alignment="CENTER" mnemonicParsing="false" onAction="#adminAddNewUserButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Add New User" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="adminRemoveExistingUserButton" alignment="CENTER" layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#adminRemoveExistingUserButtonOnClick" onMouseClicked="#citizenPayPassportButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Remove Existing User" textFill="WHITE">
+            <Button fx:id="adminRemoveExistingUserButton" alignment="CENTER" layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#adminRemoveExistingUserButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Remove Existing User" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="adminCreateChartButton" alignment="CENTER" layoutX="20.0" layoutY="201.0" mnemonicParsing="false" onAction="#adminCreateChartButtonOnClick" onMouseClicked="#citizenTrackAppStatButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Create Chart" textFill="WHITE">
+            <MenuButton alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #3B5323;" text="Create Chart" textFill="#5dfc0a">
+              <items>
+                <MenuItem fx:id="pieChartButton" mnemonicParsing="false" onAction="#pieChartButton" text="Pie Chart" />
+                <MenuItem fx:id="barChartButton" mnemonicParsing="false" onAction="#barChartButtonOnClick" text="Bar Chart" />
+                  <MenuItem fx:id="lineChartButton" mnemonicParsing="false" onAction="#lineChartButtonOnClick" text="Line Chart" />
+              </items>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="adminEmpSalaryDisButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminEmpSalaryDisButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Employee Salary Distribute" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="adminEmpSalaryDisButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminEmpSalaryDisButtonOnClick" onMouseClicked="#citizenReceivePassButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Employee Salary Distribute" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearInterfaceButtonOnClick" onMouseClicked="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
+            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>

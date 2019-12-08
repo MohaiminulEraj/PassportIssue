@@ -339,7 +339,7 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <Label layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="151.0" style="-fx-text-fill: black;" text="District:" GridPane.rowIndex="2">
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="151.0" style="-fx-text-fill: black;" text="Division:" GridPane.rowIndex="2">
                                  <font>
                                     <Font name="Calibri" size="20.0" />
                                  </font>
@@ -373,11 +373,6 @@
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPresentAddrDistrict" layoutX="161.0" layoutY="40.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
                               <TextField fx:id="citizenPresentAddrPO" layoutX="161.0" layoutY="70.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="14.0" />
@@ -388,6 +383,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
+                              <ChoiceBox fx:id="citizenPresentAddrDivisionChoiceBox" prefHeight="30.0" prefWidth="286.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Separator layoutX="13.0" layoutY="48.0" prefWidth="200.0" />
@@ -431,7 +427,7 @@
                                     <Insets left="15.0" right="15.0" />
                                  </padding>
                               </Label>
-                              <Label layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="151.0" style="-fx-text-fill: black;" text="District:" GridPane.rowIndex="2">
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="26.0" prefWidth="151.0" style="-fx-text-fill: black;" text="Division:" GridPane.rowIndex="2">
                                  <font>
                                     <Font name="Calibri" size="20.0" />
                                  </font>
@@ -465,11 +461,6 @@
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="citizenPermanentAddrDistrict" layoutX="161.0" layoutY="40.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
                               <TextField fx:id="citizenPermanentAddrPO" layoutX="161.0" layoutY="70.0" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="14.0" />
@@ -480,6 +471,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </TextField>
+                              <ChoiceBox fx:id="citizenPermanentAddrDivisionChoiceBox" prefHeight="30.0" prefWidth="286.0" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Separator layoutX="15.0" layoutY="55.0" prefWidth="200.0" />

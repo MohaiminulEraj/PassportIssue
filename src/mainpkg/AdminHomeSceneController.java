@@ -18,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -36,13 +37,17 @@ public class AdminHomeSceneController implements Initializable {
     @FXML
     private Button adminRemoveExistingUserButton;
     @FXML
-    private Button adminCreateChartButton;
-    @FXML
     private Button adminEmpSalaryDisButton;
     @FXML
     private Button clearInterfaceButton;
     @FXML
     private Button logoutButton;
+    @FXML
+    private MenuItem pieChartButton;
+    @FXML
+    private MenuItem barChartButton;
+    @FXML
+    private MenuItem lineChartButton;
 
     /**
      * Initializes the controller class.
@@ -72,19 +77,29 @@ public class AdminHomeSceneController implements Initializable {
     }
 
     @FXML
-    private void adminCreateChartButtonOnClick(ActionEvent event) {
-        loadUI("CreateChart");
+    private void pieChartButton(ActionEvent event) {
+        loadUI("CreatePieChart");
     }
 
+    @FXML
+    private void barChartButtonOnClick(ActionEvent event) {
+        loadUI("CreateBarChart");
+    }
+
+    @FXML
+    private void lineChartButtonOnClick(ActionEvent event) {
+        loadUI("CreateLineChart");
+    }
+    
     @FXML
     private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
     }
-
+    
     @FXML
-    private void clearInterfaceButtonOnClick(MouseEvent event) {
+    private void clearInterfaceButtonOnClick(ActionEvent event) {
         borderpane.setCenter(null);
     }
-
+    
     @FXML
     private void logoutButtonOnClick(ActionEvent event) throws IOException {
         Parent mainPageParent = FXMLLoader.load(getClass().getResource("MainPage.fxml"));

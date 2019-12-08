@@ -8,25 +8,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #55AE3A;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="mainpkg.CitizenNewPassController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #55AE3A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.CitizenNewPassController">
    <children>
-      <TextField fx:id="userNameTextField" layoutX="146.0" layoutY="11.0" onAction="#userNameTextField" prefHeight="30.0" prefWidth="220.0" promptText="username" style="-fx-background-color: #BDFCC9;">
+      <TextField fx:id="userNameTextField" layoutX="148.0" layoutY="28.0" prefHeight="30.0" prefWidth="220.0" promptText="email address" style="-fx-background-color: #BDFCC9;">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextArea fx:id="userDetailsTextArea" layoutX="19.0" layoutY="54.0" prefHeight="203.0" prefWidth="463.0" promptText="User details" style="-fx-background-color: #BDFCC9;">
+      <TextArea fx:id="userDetailsTextArea" layoutX="21.0" layoutY="86.0" prefHeight="203.0" prefWidth="505.0" promptText="User details" style="-fx-background-color: #BDFCC9;">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </TextArea>
-      <Button fx:id="loadInfoButton" layoutX="389.0" layoutY="11.0" mnemonicParsing="false" onAction="#loadInfoButtonOnClick" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Load Info" textFill="WHITE">
+      <Button fx:id="loadInfoButton" layoutX="391.0" layoutY="28.0" mnemonicParsing="false" onAction="#loadInfoButtonOnClick" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Load Info" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="19.0" layoutY="14.0" prefHeight="26.0" prefWidth="127.0" style="-fx-text-fill: black;" text="Username:">
+      <Label layoutX="21.0" layoutY="31.0" prefHeight="26.0" prefWidth="127.0" style="-fx-text-fill: black;" text="Username:">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
@@ -34,7 +33,7 @@
             <Insets left="15.0" right="15.0" />
          </padding>
       </Label>
-      <Label fx:id="confirmationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="268.0" prefHeight="38.0" prefWidth="463.0" style="-fx-text-fill: red;" text="confirmationLabel">
+      <Label fx:id="confirmationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="44.0" layoutY="302.0" prefHeight="91.0" prefWidth="463.0" style="-fx-text-fill: red;" text="confirmationLabel">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
@@ -42,7 +41,7 @@
             <Insets left="15.0" right="15.0" />
          </padding>
       </Label>
-      <Button fx:id="applyPassButton" layoutX="205.0" layoutY="312.0" mnemonicParsing="false" onAction="#applyPassButtonOnClick" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Apply" textFill="WHITE">
+      <Button fx:id="applyPassButton" layoutX="229.0" layoutY="393.0" mnemonicParsing="false" onAction="#applyPassButtonOnClick" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Apply" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="14.0" />
          </font>

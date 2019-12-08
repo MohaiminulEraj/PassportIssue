@@ -107,9 +107,8 @@ public class CitizenHomeSceneController implements Initializable {
     @FXML
     private void citizenSystemRatingButtonOnClick(ActionEvent event) {
     }
-
     @FXML
-    private void clearInterfaceButtonOnClick(MouseEvent event) {
+    private void clearInterfaceButtonOnClick(ActionEvent event) {
         borderpane.setCenter(null);
     }
 
@@ -122,5 +121,5 @@ public class CitizenHomeSceneController implements Initializable {
         window.setScene(mainPageScene);
         window.show();
     }
-    
+ 
 }

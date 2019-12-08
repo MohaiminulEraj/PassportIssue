@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class PassportIssueApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
         
         Scene scene = new Scene(root);
         

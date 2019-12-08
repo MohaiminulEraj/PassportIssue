@@ -82,7 +82,7 @@
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearInterfaceButtonOnClick" onMouseClicked="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
+            <Button fx:id="clearInterfaceButton" alignment="CENTER" layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearInterfaceButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Clear Interface" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>

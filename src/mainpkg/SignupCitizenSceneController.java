@@ -70,7 +70,6 @@ public class SignupCitizenSceneController implements Initializable {
     private TextField citizenPresentAddrVill;
     @FXML
     private TextField citizenPresentAddrRoad;
-    @FXML
     private TextField citizenPresentAddrDistrict;
     @FXML
     private TextField citizenPresentAddrPO;
@@ -82,7 +81,6 @@ public class SignupCitizenSceneController implements Initializable {
     private TextField citizenPermanentAddrVill;
     @FXML
     private TextField citizenPermanentAddrRoad;
-    @FXML
     private TextField citizenPermanentAddrDistrict;
     @FXML
     private TextField citizenPermanentAddrPO;
@@ -106,6 +104,10 @@ public class SignupCitizenSceneController implements Initializable {
     private ChoiceBox guardianReligionChoiceBox;
     @FXML
     private Label warningLabel;
+    @FXML
+    private ChoiceBox citizenPresentAddrDivisionChoiceBox;
+    @FXML
+    private ChoiceBox citizenPermanentAddrDivisionChoiceBox;
 
     /**
      * Initializes the controller class.
@@ -114,6 +116,8 @@ public class SignupCitizenSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        citizenReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
        guardianReligionChoiceBox.getItems().addAll("Islam","Hinduism","Buddhism","Christianity");
+       citizenPresentAddrDivisionChoiceBox.getItems().addAll("Barisal","Chittagong","Dhaka","Khulna","Mymensingh","Rajshahi","Rangpur","Sylhet");
+       citizenPermanentAddrDivisionChoiceBox.getItems().addAll("Barisal","Chittagong","Dhaka","Khulna","Mymensingh","Rajshahi","Rangpur","Sylhet");
        
        secondaryCountryTextField.setDisable(true);
        
@@ -171,35 +175,27 @@ public class SignupCitizenSceneController implements Initializable {
             else fw = new FileWriter(f);
             
             fw.write(
-            	"Personal Information: "+ citizenFullNameTextField.getText()+" "
-                    +toogleGenderValue+" "
-                    +localDate+" "
-                    +nationalIdTextField.getText()+" "
-                    +heightTextField.getText()+" "
-                    +citizenReligionChoiceBox.getValue()+" "
-                    +citizenPhoneNoTextField.getText()+" "
-                    +citizenEmailTextField.getText()+
-                    "Present Address: "
+                    citizenEmailTextField.getText() +" "+ citizenFullNameTextField.getText()+" "
+                    +toogleGenderValue +" "+ localDate+" "
+                    +nationalIdTextField.getText() +" "+ heightTextField.getText()+" "
+                    +citizenReligionChoiceBox.getValue() +" "+ citizenPhoneNoTextField.getText()+" "
                     +citizenPresentAddrVill.getText()+" "
                     +citizenPresentAddrRoad.getText()+" "
-                    +citizenPresentAddrDistrict.getText()+" "
+                    +citizenPresentAddrDivisionChoiceBox.getValue()+" "
                     +citizenPresentAddrPO.getText()+" "
-                    +citizenPresentAddrZip.getText()+
-                    "Parmanent Address: "
+                    +citizenPresentAddrZip.getText()+" "
                     +citizenPermanentAddrVill.getText()+" "
                     +citizenPermanentAddrRoad.getText()+" "
-                    +citizenPermanentAddrDistrict.getText()+" "
+                    +citizenPermanentAddrDivisionChoiceBox.getValue()+" "
                     +citizenPermanentAddrPO.getText()+" "
-                    +citizenPermanentAddrZip.getText()+
-                    "Guardian Information: "
+                    +citizenPermanentAddrZip.getText()+" "
                     +citizenRelationGuadianTextField.getText()+" "
                     +citizenGuardianFullNameTextField.getText()+" "
                     +guardianNationality+" "
                     +guardianReligionChoiceBox.getValue()+" "
                     +citizenGuardianPhoneNoTextField.getText()+" "
-                    +citizenGuardianEmailTextField.getText()+" "+
-                    " Citizenship Information: "
-                    +secondaryCountryTextField.getText()+" "
+                    +citizenGuardianEmailTextField.getText()+" "
+                    +secondaryCountryTextField.getText()+" \n"
             );
             
             fLoginInfo = new File("LoginInfo.txt");
@@ -260,7 +256,7 @@ public class SignupCitizenSceneController implements Initializable {
         if(isPermanentAddrSame.isSelected()){
                     citizenPermanentAddrVill.setText(citizenPresentAddrVill.getText());
                     citizenPermanentAddrRoad.setText(citizenPresentAddrRoad.getText());
-                    citizenPermanentAddrDistrict.setText(citizenPresentAddrDistrict.getText());
+                    citizenPermanentAddrDivisionChoiceBox.setValue(citizenPresentAddrDivisionChoiceBox.getValue());
                     citizenPermanentAddrPO.setText(citizenPresentAddrPO.getText());
                     citizenPermanentAddrZip.setText(citizenPresentAddrZip.getText());
                          
