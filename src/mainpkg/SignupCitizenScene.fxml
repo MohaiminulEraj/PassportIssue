@@ -22,9 +22,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="762.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SignupCitizenSceneController">
+<AnchorPane id="AnchorPane" prefHeight="703.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SignupCitizenSceneController">
    <children>
-      <VBox alignment="CENTER" prefHeight="762.0" prefWidth="892.0" style="-fx-spacing: 2; -fx-background-color: #55AE3A;">
+      <VBox alignment="CENTER" layoutY="10.0" prefHeight="730.0" prefWidth="892.0" style="-fx-spacing: 2; -fx-background-color: #55AE3A;">
          <children>
             <MenuBar prefHeight="25.0" prefWidth="906.0">
               <menus>
@@ -538,7 +538,7 @@
                         <Font size="14.0" />
                      </font>
                   </PasswordField>
-                  <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="505.0" text="warningLabel" GridPane.columnIndex="2">
+                  <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="505.0" GridPane.columnIndex="2">
                      <font>
                         <Font name="Calibri" size="16.0" />
                      </font>

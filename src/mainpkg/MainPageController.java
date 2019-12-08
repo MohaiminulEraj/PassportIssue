@@ -87,11 +87,11 @@ public class MainPageController implements Initializable {
                          +dis.readUTF();
                 }
             }
-            String[] user = str.split(",");
+            String[] user = str.split("\\??");
             
             for(int i=0; i<= (user.length-3); i=i+3){
             System.out.println("User: "+ user[i]);
-                if(uN == user[i] && uP == user[i+1] && uG  == user[i+2]){
+                if(uN == user[i+1] && uP == user[i+2] && uG  == user[i+3]){
             
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("CitizenHomeScene.fxml"));
@@ -102,17 +102,18 @@ public class MainPageController implements Initializable {
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                     window.setScene(newScene);
                     window.show();
-                    found = true;
-            }
+                    //found = true;
+                }
+                
                 if(uN.equals("Nabil") && uP.equals("Eraj") && uG.equals("Admin")){
-            Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
-            
-            Scene newScene = new Scene(nextnewGUI);
-            
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(newScene);
-            window.show();
-            }
+                    Parent nextnewGUI = FXMLLoader.load(getClass().getResource("AdminHomeScene.fxml"));
+
+                    Scene newScene = new Scene(nextnewGUI);
+
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    window.setScene(newScene);
+                    window.show();
+                }
             }
             /*sc.useDelimiter(" ");           // Space diya separate krtesi
             while(sc.hasNextLine() && !found){

@@ -122,10 +122,8 @@ public class SignupCitizenSceneController implements Initializable {
     @FXML
     private void citizenSignupButtonOnClick(ActionEvent event) throws IOException {
         
-        
-        
         boolean signupable = false;
-        
+        warningLabel.setText("Please fill up the fields!");
         
         File f = null;
         FileWriter fw = null; 
@@ -155,7 +153,6 @@ public class SignupCitizenSceneController implements Initializable {
                 signupable = true;
                 } 
                 else {
-                    
                     warningLabel.setText("Password Required!!!");
                 }
             }
@@ -216,7 +213,9 @@ public class SignupCitizenSceneController implements Initializable {
             bos = new BufferedOutputStream(fos);
             dos = new DataOutputStream(bos);
             
-            dos.writeUTF(citizenEmailTextField.getText()+","+citizenSignunpasswordField.getText()+","+"Citizen"+",");
+            dos.writeUTF(citizenEmailTextField.getText());
+            dos.writeUTF(citizenSignunpasswordField.getText());
+            dos.writeUTF("Citizen");
             //dos.writeUTF(citizenSignunpasswordField.getText());
             //dos.writeUTF("Citizen ");
                  

@@ -8,6 +8,8 @@ package mainpkg;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -48,6 +51,8 @@ public class CitizenHomeSceneController implements Initializable {
     private Button clearInterfaceButton;
     @FXML
     private Button logoutButton;
+    @FXML
+    private BorderPane borderpane;
 
     /**
      * Initializes the controller class.
@@ -55,22 +60,36 @@ public class CitizenHomeSceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
+    
+    private void loadUI(String ui) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource(ui+".fxml"));
+            borderpane.setCenter(root);
+        } catch (IOException ex) {
+            Logger.getLogger(AdminHomeSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     @FXML
     private void citizenApplyNewPassButtonOnclick(ActionEvent event) {
+        loadUI("CitizenNewPass");
     }
 
     @FXML
     private void citizenApplyReissuePassButtonOnclick(ActionEvent event) {
+        loadUI("CitizenReissuePass");
     }
 
     @FXML
     private void citizenApplyRetrievePassButtonOnclick(ActionEvent event) {
+        loadUI("CitizenRetrievePass");
     }
 
     @FXML
     private void citizenPayPassportButtonOnClick(MouseEvent event) {
+        
     }
 
     @FXML
@@ -91,6 +110,7 @@ public class CitizenHomeSceneController implements Initializable {
 
     @FXML
     private void clearInterfaceButtonOnClick(MouseEvent event) {
+        borderpane.setCenter(null);
     }
 
     @FXML
@@ -101,10 +121,6 @@ public class CitizenHomeSceneController implements Initializable {
         
         window.setScene(mainPageScene);
         window.show();
-    }
-
-    @FXML
-    private void clearInterfaceButtonOnClick(ActionEvent event) {
     }
     
 }

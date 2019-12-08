@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.AdminHomeSceneController">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.AdminHomeSceneController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
          <menus>
@@ -69,11 +69,6 @@
                </font>
             </Button>
             <Button fx:id="adminEmpSalaryDisButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminEmpSalaryDisButtonOnClick" onMouseClicked="#citizenReceivePassButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Employee Salary Distribute" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="adminObserveEvaluationButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminObserveEvaluationButtonOnClick" onMouseClicked="#citizenReceivePassButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Observe Evaluation" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
