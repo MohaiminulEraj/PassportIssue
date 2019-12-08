@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #55AE3A;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="mainpkg.AdminAddNewUserController">
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: #55AE3A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.AdminAddNewUserController">
    <children>
-      <Button fx:id="AddUserButton" layoutX="197.0" layoutY="254.0" mnemonicParsing="false" onAction="#AddUserButtonOnClick" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Add User" textFill="WHITE">
+      <Button fx:id="AddUserButton" layoutX="197.0" layoutY="221.0" mnemonicParsing="false" onAction="#AddUserButtonOnClick" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Add User" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="14.0" />
          </font>
@@ -55,12 +55,12 @@
                   <Insets left="15.0" right="15.0" />
                </padding>
             </Label>
-            <TextField fx:id="userNameTextField" prefHeight="30.0" prefWidth="228.0" promptText="username" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
+            <TextField fx:id="userNameTextField" onMouseClicked="#addUserMouseClick" prefHeight="30.0" prefWidth="228.0" promptText="username" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="loginPasswordField" prefHeight="30.0" prefWidth="228.0" promptText="password" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <PasswordField fx:id="loginPasswordField" onMouseClicked="#addPassMouseClick" prefHeight="30.0" prefWidth="228.0" promptText="password" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
@@ -68,5 +68,10 @@
             <ComboBox fx:id="userTypeComboBoxLogin" prefHeight="32.0" prefWidth="349.0" promptText="user type" style="-fx-background-color: #BDFCC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
+      <Text fx:id="updateTextFeild" layoutX="85.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="update info" textAlignment="CENTER" wrappingWidth="330.39999999999986">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

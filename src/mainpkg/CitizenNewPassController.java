@@ -45,8 +45,25 @@ public class CitizenNewPassController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void loadInfoButtonOnClick(ActionEvent event) {
+        File f = null;
+        Scanner sc;
+        String temp = "";
+        try{
+            f = new File("CitizenSignUpForm.txt");
+            sc = new Scanner(f);
+            while(sc.hasNext()){
+                temp = sc.nextLine();
+                
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
 
-
+    /*
     @FXML
     private void loadInfoButtonOnClick(ActionEvent event) {
         FileReader fr = null;
@@ -79,7 +96,7 @@ public class CitizenNewPassController implements Initializable {
             }
         }
     }
-
+    */
     @FXML
     private void applyPassButtonOnClick(ActionEvent event) {
         if(userNameTextField.getText().equals(""))

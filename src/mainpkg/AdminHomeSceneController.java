@@ -112,5 +112,6 @@ public class AdminHomeSceneController implements Initializable {
     private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
     }
 
+
     
 }
