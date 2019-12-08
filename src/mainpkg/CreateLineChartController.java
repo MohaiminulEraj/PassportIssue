@@ -8,14 +8,20 @@ package mainpkg;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -40,6 +46,8 @@ public class CreateLineChartController implements Initializable {
     private RadioButton addallRB;
     @FXML
     private ToggleGroup chart1;
+    @FXML
+    private Label statLabel;
 
     /**
      * Initializes the controller class.
@@ -79,7 +87,39 @@ public class CreateLineChartController implements Initializable {
             lineChart.getData().addAll(series,series2,series3);
         }
        
-        
+        for(XYChart.Data<String,Number> data: series.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>(){
+                @Override
+                public void handle(MouseEvent event) {
+                    statLabel.setText("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue()));
+                    Tooltip.install(data.getNode(),new Tooltip("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue())));
+                    
+                }
+            }
+            );
+        }
+        for(XYChart.Data<String,Number> data: series2.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>(){
+                @Override
+                public void handle(MouseEvent event) {
+                    statLabel.setText("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue()));
+                    Tooltip.install(data.getNode(),new Tooltip("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue())));
+                    
+                }
+            }
+            );
+        }
+        for(XYChart.Data<String,Number> data: series3.getData()){
+            data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>(){
+                @Override
+                public void handle(MouseEvent event) {
+                    statLabel.setText("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue()));
+                    Tooltip.install(data.getNode(),new Tooltip("X: "+String.valueOf(data.getXValue())+"\nY: "+String.valueOf(data.getYValue())));
+                    
+                }
+            }
+            );
+        }
     }
     
     private void loadGenderChart(){

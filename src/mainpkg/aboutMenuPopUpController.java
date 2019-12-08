@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  *
  * @author Nabil Akhunjee
  */
-public class ForgotAccntpopupController implements Initializable {
+public class aboutMenuPopUpController implements Initializable {
 
     @FXML
     private Button okayCloseStageButton;
@@ -35,5 +35,6 @@ public class ForgotAccntpopupController implements Initializable {
     private void okayCloseStageButtonOnClick(ActionEvent event) {
         Stage stage  = (Stage) okayCloseStageButton.getScene().getWindow();
         stage.close();
-    } 
+    }
+    
 }

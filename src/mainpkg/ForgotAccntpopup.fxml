@@ -7,7 +7,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="161.0" prefWidth="472.0" style="-fx-background-color: #55AE3A; -fx-border-color: #3B5323; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ForgotAccntpopupController">
    <children>
-      <Label layoutX="29.0" layoutY="47.0" text="Please contact with Admin to retrieve your account">
+      <Label layoutX="29.0" layoutY="47.0" text="Please contact with Admin to retrieve your account" textFill="#1b1818">
          <font>
             <Font name="Calibri Italic" size="20.0" />
          </font>

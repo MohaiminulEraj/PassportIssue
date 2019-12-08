@@ -24,9 +24,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainPageController implements Initializable {
@@ -43,6 +45,8 @@ public class MainPageController implements Initializable {
     private PasswordField loginPasswordField;
     @FXML
     private ComboBox userTypeComboBoxLogin;
+    @FXML
+    private AnchorPane anchorpane;
     
     @Override 
     public void initialize(URL url, ResourceBundle rb) {
@@ -108,8 +112,6 @@ public class MainPageController implements Initializable {
             alert.setContentText(s);
             alert.showAndWait();
         }
-        
-        
            } catch(Exception e){
                System.out.println(e);
            }
@@ -136,14 +138,21 @@ public class MainPageController implements Initializable {
         window.show();
     }
     
-    /* public void changSceneOnUserType(String userHomeScene) throws IOException{
-    Parent nextnewGUI = FXMLLoader.load(getClass().getResource(userHomeScene));
-    
-    Scene newScene = new Scene(nextnewGUI);
-    
-    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-    window.setScene(newScene);
-    window.show();
-    }*/
+    @FXML
+    private void closeStage(ActionEvent event) {
+        Stage stage = (Stage) anchorpane.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    private void aboutMenuItem(ActionEvent event) throws IOException {
+        Parent aboutPopup = FXMLLoader.load(getClass().getResource("aboutMenuPopUp.fxml"));
+        Scene popupForgotAccountScene = new Scene(aboutPopup);
+        
+        Stage window  = new Stage();
+        window.setTitle("About");
+        window.setScene(popupForgotAccountScene);
+        window.show();
+    }
     
 }
