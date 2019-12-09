@@ -47,7 +47,7 @@ public class AdminHomeSceneController implements Initializable {
     @FXML
     private MenuItem lineChartButton;
     @FXML
-    private Button adminEmpSalaryDisButton;
+    private Button adminUserListButton;
 
     /**
      * Initializes the controller class.
@@ -109,7 +109,8 @@ public class AdminHomeSceneController implements Initializable {
     }
 
     @FXML
-    private void adminEmpSalaryDisButtonOnClick(ActionEvent event) {
+    private void adminUserListButtonOnClick(ActionEvent event) {
+        loadUI("TableView");
     }
 
 
