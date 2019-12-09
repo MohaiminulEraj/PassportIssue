@@ -74,7 +74,7 @@
                   <Font name="Calibri Bold" size="14.0" />
                </font>
             </MenuButton>
-            <Button fx:id="adminEmpSalaryDisButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminEmpSalaryDisButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="Employee Salary Distribute" textFill="WHITE">
+            <Button fx:id="adminUserListButton" alignment="CENTER" layoutX="20.0" layoutY="281.0" mnemonicParsing="false" onAction="#adminUserListButtonOnClick" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #3B5323; -fx-text-fill: #5DFC0A;" text="User List" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
