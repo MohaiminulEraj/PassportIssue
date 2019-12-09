@@ -51,12 +51,15 @@ public class CitizenNewPassController implements Initializable {
         File f = null;
         Scanner sc;
         String temp = "";
+        String[] line = null;
+        String[] space = null;
         try{
             f = new File("CitizenSignUpForm.txt");
             sc = new Scanner(f);
             while(sc.hasNext()){
                 temp = sc.nextLine();
-                
+                line = temp.split(" \n");
+                space = temp.split(" ");
             }
         }catch(Exception e){
             System.out.println(e);
