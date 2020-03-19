@@ -1,4 +1,1 @@
-a@a.c abcd Male 2019-12-11 24234 8 Islam 234234   null     null     Male null    
-b@b.c wrwqer Male 2019-12-12 2342354 7 Hinduism 3252   null     null     Male null    
-c@c.c asfaf Female 2019-12-05 2314234 7 Islam 3463463   null     null     Female null    
-d@d.c weqtrf Male 2019-12-03 242341 8 Islam 32525   null     null     Male null    
+a@a.C a Male 2019-12-04 34325 9 Islam 124124 a 1 Barisal post 1000 a 1 Barisal post 1000 F Fa Male Islam 214124 aa@aa.c b@b.c b Female 2019-12-12 13124 7 Hinduism 123124 vil 1 Chittagong p 1229 vil 1 Chittagong p 1229 M Ma Female Hinduism 214412 m@m.c l@l.c l Female 2019-12-07 12345 6 Christianity 12345 Uttara 12 Dhaka po 1230 Uttara 12 Dhaka po 1230 fa fa@fa.c Female Christianity 12345 fa@fa.c  

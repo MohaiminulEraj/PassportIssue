@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ModifyController">
+   <children>
+      <ComboBox fx:id="GenderComboBox" layoutX="17.0" layoutY="55.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text layoutX="25.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" />
+      <ComboBox fx:id="ReligionComboBox" layoutX="153.0" layoutY="55.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text layoutX="153.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Religion:" wrappingWidth="89.46051025390625" />
+      <ComboBox fx:id="DivisionComboBox" layoutX="297.0" layoutY="52.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text layoutX="297.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Division:" wrappingWidth="97.4140625" />
+      <Button fx:id="searchButton" layoutX="27.0" layoutY="103.0" mnemonicParsing="false" onAction="#searchButtonOnClick" prefHeight="26.0" prefWidth="90.0" text="Search" />
+      <TextArea fx:id="genderTextArea" layoutX="24.0" layoutY="155.0" prefHeight="162.0" prefWidth="97.0" />
+      <TextArea fx:id="ReligionTextArea" layoutX="153.0" layoutY="155.0" prefHeight="162.0" prefWidth="121.0" />
+      <TextArea fx:id="DivisionTextArea" layoutX="297.0" layoutY="155.0" prefHeight="162.0" prefWidth="122.0" />
+      <AnchorPane layoutX="428.0" layoutY="33.0" prefHeight="454.0" prefWidth="533.0">
+         <children>
+            <BarChart fx:id="barChart" layoutX="23.0" layoutY="24.0" prefHeight="402.0" prefWidth="485.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children></AnchorPane>
+      <Button fx:id="barChartButton" layoutX="41.0" layoutY="400.0" mnemonicParsing="false" onAction="#barChartButtonOnClick" prefHeight="26.0" prefWidth="258.0" text="Generate Zip Wise BarChart" />
+   </children>
+</AnchorPane>

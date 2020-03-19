@@ -128,7 +128,51 @@ public class MainPageController implements Initializable {
             else {
                 //err=true;
             }
-        }
+            /*
+            f = new File("loginInfo.bin");
+            String str="";
+            String str2="";
+            if(!f.exists()){
+                System.out.println("file nai :3");
+            }
+            
+            else{
+                
+                fis = new FileInputStream(f);
+                bis = new BufferedInputStream(fis);
+                dis = new DataInputStream(bis);
+                //String[] ss = str.split("\\?");
+                Scanner sc = new Scanner(bis);
+                //fr = new FileReader(dis);
+                //ois = new ObjectInputStream(fis);
+                //str = dis.readUTF();
+                while(sc.hasNextLine()){
+                    str2 += dis.readUTF();
+                    
+                    //str += sc.nextLine();
+                }
+                   dis.close();
+                  sc.close();
+                
+                while(true){
+                str += dis.readUTF();
+                      
+                }
+                
+                //System.out.println("Str: "+ str);
+                
+                while(true){
+                    str+= ois.readObject()
+                         +ois.readUTF()
+                         +ois.readUTF();
+//                    str+= dis.readUTF()
+//                         +dis.readUTF()
+//                         +dis.readUTF();
+                }
+            }
+                */
+            }
+        
         sc.close();
         if(err==true){
             Alert alert = new Alert(AlertType.ERROR);

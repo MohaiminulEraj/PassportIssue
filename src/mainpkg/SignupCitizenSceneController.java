@@ -195,7 +195,7 @@ public class SignupCitizenSceneController implements Initializable {
                     +guardianReligionChoiceBox.getValue()+" "
                     +citizenGuardianPhoneNoTextField.getText()+" "
                     +citizenGuardianEmailTextField.getText()+" "
-                    +secondaryCountryTextField.getText()+" \n"
+                    +secondaryCountryTextField.getText()+" "
             );
             
             fLoginInfo = new File("LoginInfo.txt");
@@ -205,7 +205,7 @@ public class SignupCitizenSceneController implements Initializable {
             fwLoginInfo.write(
                     citizenEmailTextField.getText()+","+ citizenSignunpasswordField.getText() + ",Citizen,"
             );
-            /*
+            
             fBin = new File("loginInfo.bin");
             if(fBin.exists()) fos = new FileOutputStream(fBin,true);
             else fos = new FileOutputStream(fBin);
@@ -220,7 +220,7 @@ public class SignupCitizenSceneController implements Initializable {
             System.out.println(sr);
             //dos.writeUTF(citizenSignunpasswordField.getText());
             //dos.writeUTF("Citizen ");
-             */    
+              
         } catch (IOException ex) {
             Logger.getLogger(SignupCitizenSceneController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
